@@ -58,10 +58,15 @@
   font-weight: normal;
 }
 
+h1, h2, h3, h4 {
+  font-family: "anisette-std", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
