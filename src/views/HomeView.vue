@@ -111,43 +111,45 @@ document.addEventListener('scroll', () => {
 	website="https://discord.gg/xnyMD2r"
 	buttonText="Join Discord"
 />
-<div class="container py-5">
-	<h2>About Noxite</h2>
-	<br>
-	<p>Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
-	<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server made the switch to survival in 2016 and have since strived to deliver an experience that is more relaxed and welcoming.</p>
-</div>
-<div class="overlay-container" v-for="content in aboutContents" :key="content.id" >
-	<div class="bg grayscale" v-bind:style="{ backgroundImage: 'url(' + content.image + ')' }" data-type="background" data-speed=".6"></div>
-	<div class="bg overlay red py-5 h-100"></div>
-	<div class="bg overlay">
-		<div class="container py-5 h-100">
-			<div class="d-flex h-100 align-items-center">
-				<div class="text-white">
-					<h3 class="pb-4"><i class="bi pe-3" :class="content.icon"></i>{{ content.title }}</h3>
-					<p class="lead mb-0">{{ content.description }}</p>
+<main>
+	<div class="container py-5">
+		<h2>About Noxite</h2>
+		<br>
+		<p>Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
+		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server made the switch to survival in 2016 and have since strived to deliver an experience that is more relaxed and welcoming.</p>
+	</div>
+	<div class="overlay-container" v-for="content in aboutContents" :key="content.id" >
+		<div class="bg grayscale" v-bind:style="{ backgroundImage: 'url(' + content.image + ')' }" data-type="background" data-speed=".6"></div>
+		<div class="bg overlay red py-5 h-100"></div>
+		<div class="bg overlay">
+			<div class="container py-5 h-100">
+				<div class="d-flex h-100 align-items-center">
+					<div class="text-white">
+						<h3 class="pb-4"><i class="bi pe-3" :class="content.icon"></i>{{ content.title }}</h3>
+						<p class="lead mb-0">{{ content.description }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="container-sm py-5">
-	<h2>FAQ</h2>
-	<div class="accordion accordion-flush">
-		<div class="accordion-item" v-for="faq in faqs" :key="faq.id" :id="faq.id">
-			<h5 class="accordion-header">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + faq.id" :aria-controls="'collapse' + faq.id" aria-expanded="false">
-					{{ faq.question }}
-				</button>
-			</h5>
-			<div :id="'collapse' + faq.id" class="accordion-collapse collapse" :data-bs-parent="'#faq' + faq.id">
-				<div class="accordion-body">
-					{{ faq.answer }}
+	<div class="container-sm py-5">
+		<h2>FAQ</h2>
+		<div class="accordion accordion-flush">
+			<div class="accordion-item" v-for="faq in faqs" :key="faq.id" :id="faq.id">
+				<h5 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + faq.id" :aria-controls="'collapse' + faq.id" aria-expanded="false">
+						{{ faq.question }}
+					</button>
+				</h5>
+				<div :id="'collapse' + faq.id" class="accordion-collapse collapse" :data-bs-parent="'#faq' + faq.id">
+					<div class="accordion-body">
+						{{ faq.answer }}
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</main>
 <CallToAction
 	title="Learn about our custom plugins" 
 	description="All of Noxite's core plugins are custom-made and you can read all about it here."

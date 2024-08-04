@@ -12,12 +12,12 @@ const router = createRouter({
     {
       path: '/rules',
       name: 'rules',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/RulesView.vue')
     },
     {
       path: '/guides',
       name: 'guides',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/GuidesView.vue')
     },
   ]
 })
