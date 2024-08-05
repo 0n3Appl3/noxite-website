@@ -114,8 +114,39 @@ import StyledHeading from '../components/StyledHeading.vue'
                     </div>
                 </div>
                 <div id="nav-teleportation" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-teleportation-tab" tabindex="0">
-                    <h5>Teleportation</h5>
-                    <p>test</p>
+                    <h5><strong>Teleportation</strong></h5>
+                    <p>Another feature that comes standard in survival multiplayer servers is player teleportation. Realistically, this is a must-have for when you want to play with friends or simply need to get a hold of another player.</p>
+                    <p>There are three commands that you need to know.</p>
+                    <br>
+                    <h6>Send a Teleport Request</h6>
+                    <p>You are not given instant teleportation abilities. Instead, you have to send a request to teleport to someone.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/tp [player]</samp>
+                        </div>
+                    </div>
+                    <div class="bs-callout"><strong>Note:</strong> Unlike other servers, teleport requests do not have a time limit, so the recipient of the request can accept it at any time.</div>
+                    <br>
+                    <h6>Accept Teleport</h6>
+                    <p>Enter the command below to allow the player to teleport to you. How are your hospitality skills? Just kidding.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/tp accept</samp>
+                        </div>
+                    </div>
+                    <br>
+                    <h6>Deny Teleport</h6>
+                    <p>You could also be that guy and deny their request. Enter the command below.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/tp deny</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 me-3">
+                <div class="me-3">
+
                 </div>
             </div>
         </div>
