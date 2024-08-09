@@ -143,3 +143,9 @@ a.active {
 .noxite-button i {
   padding-right: 12px;
 }
+
+.claim-map-block {
+  padding: 0rem 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 2rem;
+}
