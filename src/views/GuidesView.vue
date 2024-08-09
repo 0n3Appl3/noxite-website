@@ -7,7 +7,6 @@ import StyledHeading from '../components/StyledHeading.vue'
     <StyledHeading title="Player Guides" background="./src/assets/thing_1.png" />
     <div class="container-sm py-5">
         <div class="row">
-            <h4 class="pb-3">Topics</h4>
             <div class="col-2 me-3">
                 <div id="nav-tab" class="list-group me-3" role="tablist">
                     <a href="#land-claiming" id="nav-land-claiming-tab" class="list-group-item list-group-item-action nav-link active" data-bs-toggle="tab" data-bs-target="#nav-land-claiming" role="tab" aria-controls="nav-land-claiming" aria-selected="true">Land Claiming</a>
@@ -23,8 +22,79 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <p>test</p>
                 </div>
                 <div id="nav-chest-shop" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-chest-shop-tab" tabindex="0">
-                    <h5>Chest Shop</h5>
-                    <p>test</p>
+                    <h5><strong>Chest Shop</strong></h5>
+                    <p>Buying and selling items in multiplayer is different on Noxite. Other server economies would utilise some form of chest shop system and Noxite's version takes this concept and tweaks it slightly.</p>
+                    <p>We will follow the natural flow of how to use this system from creation to management.</p>
+                    <br>
+                    <h6>Creating a New Shop</h6>
+                    <p>As mentioned, this chest shop system works differently compared to other chest shop plugins on other servers. You must <strong>hold a chest or barrel in your main hand</strong> when you enter the following command.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/shop create [shop name]</samp>
+                        </div>
+                    </div>
+                    <div class="bs-callout"><strong>Note:</strong> Your shop names must be unique. For example, you cannot have multiple shops named 'My Shop', but it is also possible that someone else has already taken your chosen shop name.</div>
+                    <p>You will receive a success message saying you have created a new shop under that name. Notice that the name of the chest or barrel you were holding is now named after your shop.</p>
+                    <p>Next, place the chest or barrel on the ground. A message will appear saying that you have established your chest shop.</p>
+                    <div class="bs-callout bs-callout-warning"><strong>Warning:</strong> Once you establish your shop, you cannot break the chest or barrel. This is to prevent accidentally dismantling your shop. If you want to relocate your shop, you must first remove the shop before breaking the chest and receive its contents, then create and establish a new shop.</div>
+                    <p>When you right click the chest or barrel, a GUI will appear showing three menu items: Profits, Stock and Exit.</p>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"><strong>Item</strong></th>
+                                <th scope="col"><strong>Description</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Profits</td>
+                                <td>This is where all the diamonds you make from the shop will be stored. You can withdraw and deposit diamonds like transferring items in a regular player inventory menu.</td>
+                            </tr>
+                            <tr>
+                                <td>Stock</td>
+                                <td>View what items you are selling in the shop. You can remove items from your shop by clicking on the item you want to remove.</td>
+                            </tr>
+                            <tr>
+                                <td>Exit</td>
+                                <td>Closes the shop menu GUI when clicked.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h6>Selling an Item</h6>
+                    <p>Ready to start making some diamonds? Make sure to <strong>hold the item you want to sell in your main hand</strong> when you enter the following command.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/shop sell [price] [shop name]</samp>
+                        </div>
+                    </div>
+                    <br>
+                    <p>That item will be removed from your inventory and into your shop stock, which you can view by checking your chest shop.</p>
+                    <div class="bs-callout"><strong>Note:</strong> Your shop has a limited amount of space, so be mindful of what items you want to sell.</div>
+                    <br>
+                    <h6>Buying an Item</h6>
+                    <p>If you are looking to buy something from another player's chest shop, right click the chest or barrel to open a shop GUI, which displays all items the shop owner is selling. Hovering over each item will display the amount of diamonds you need to buy that item. Simply click the item you want to buy and the transaction is complete. The item will appear in your inventory.</p>
+                    <div class="bs-callout"><strong>Note:</strong> If you have a full inventory, the item will drop below you to be picked up when you have enough space in your inventory.</div>
+                    <br>
+                    <h6>Collecting Your Profits</h6>
+                    <p>Simply click your chest shop to open the shop menu GUI. Then, click the "Profits" menu option to view the diamonds you earned. You can transfer the diamonds into your inventory like a regular player inventory.</p>
+                    <br>
+                    <h6>Removing a Shop</h6>
+                    <p>If you no longer want to keep a shop, enter the following command.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/shop remove [shop name]</samp>
+                        </div>
+                    </div>
+                    <div class="bs-callout bs-callout-danger"><strong>Danger:</strong> Be careful when executing this command. This action cannot be reversed.</div>
+                    <br>
+                    <h6>View a List of Your Shops</h6>
+                    <p>This is particularly useful if you want to check the coordinates of every shop you own. It is also a quicker way to check your shop's stock without needing to physically be there.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/shop list</samp>
+                        </div>
+                    </div>
                 </div>
                 <div id="nav-homes" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-homes-tab" tabindex="0">
                     <h5><strong>Homes</strong></h5>
@@ -146,7 +216,7 @@ import StyledHeading from '../components/StyledHeading.vue'
             </div>
             <div class="col-2 me-3">
                 <div class="me-3">
-
+                    
                 </div>
             </div>
         </div>
