@@ -1,62 +1,8 @@
 <script setup>
 import { onMounted } from 'vue'
+import { about, faqs } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
 
-const aboutContents = [
-	{ 
-		id: 1,
-		icon: 'bi-shield-fill-check',
-		title: 'Land Claiming',
-		image: './src/assets/thing_2.png',
-		description: 'A custom-made land protection and management system, created with intuition and convenience in mind which keeps griefers from looting.'
-	},
-	{ 
-		id: 2,
-		icon: 'bi-piggy-bank-fill',
-		title: 'Player Economy',
-		image: './src/assets/thing_3.png',
-		description: 'The server runs on a completely player-operated diamond currency economy with a custom-made chest shop buy and sell system.'
-	},
-	{ 
-		id: 3,
-		icon: 'bi-discord',
-		title: 'Discord Integration',
-		image: './src/assets/thing_1.png',
-		description: 'Start a conversation from any mobile device while you are not on the server; a convenient blend of Minecraft and Discord.'
-	},
-]
-const faqs = [
-	{
-		id: 1,
-		question: 'Why is it called Noxite?',
-		answer: 'Naming servers with "Craft", "SMP" and "PvP" in the name is getting old. The server\'s previous name, Appl3 PvP, came from an era when factions was a trendy gameplay style. Yes, you may know the name from the Noxcrew, but this server is not associated with them.'
-	},
-	{
-		id: 2,
-		question: 'The server is whitelisted, how can I join?',
-		answer: 'Join our Discord server and share your Minecraft username in the chat to be whitelisted.'
-	},
-	{
-		id: 3,
-		question: 'How long does it take to update the server to version 1.X?',
-		answer: 'Optimistically, up to four weeks. I am very fortunate to be able to develop my own plugins, which speeds up the updating process. Although, the server also uses plugins made by other developers who may take longer to update to the latest version, so it is sometimes difficult to give an ETA.'
-	},
-	{
-		id: 4,
-		question: 'Where do I report server connection and plugin problems?',
-		answer: 'Please let 0n3Appl3 know on the Noxite discord server and he will resolve it at his earliest convenience.'
-	},
-	{
-		id: 5,
-		question: 'I want to be a moderator, where do I apply?',
-		answer: 'Moderator applications are not available at this time. The server is not busy enough to warrant a dedicated moderation team.'
-	},
-	{
-		id: 6,
-		question: 'Hello, I am from Planet Minecraft and I am reviewing your server. May I have OP?',
-		answer: 'Nice try. This is not 2015 anymore.'
-	},
-]
 const snackBar = document.getElementById("snackbar");
 function copyServerIP(ip) {
 	const el = document.createElement('textarea');
@@ -118,7 +64,7 @@ document.addEventListener('scroll', () => {
 		<p>Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
 		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server made the switch to survival in 2016 and have since strived to deliver an experience that is more relaxed and welcoming.</p>
 	</div>
-	<div class="overlay-container" v-for="content in aboutContents" :key="content.id" >
+	<div class="overlay-container" v-for="content in about" :key="content.id" >
 		<div class="bg grayscale" v-bind:style="{ backgroundImage: 'url(' + content.image + ')' }" data-type="background" data-speed=".6"></div>
 		<div class="bg overlay red py-5 h-100"></div>
 		<div class="bg overlay">

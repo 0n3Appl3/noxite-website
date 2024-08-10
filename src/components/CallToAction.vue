@@ -1,4 +1,6 @@
 <script setup>
+import scrollToTop from '../scrollToTop'
+
 defineProps({
     title: String,
     description: String,
@@ -20,7 +22,7 @@ const openWebsite = (url) => {
 			<p>{{ description }}</p>
 		</div>
 		<div class="col-md">
-			<RouterLink :to="link" v-if="link">
+			<RouterLink @click="scrollToTop" :to="link" v-if="link">
 				<button type="button" class="btn btn-danger noxite-button float-md-end px-4 py-2 mt-3">
 					<i class="bi bi-arrow-right"></i>{{ buttonText }}
 				</button>

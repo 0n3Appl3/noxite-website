@@ -1,10 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import scrollToTop from './scrollToTop'
 import ScrollToTop from './components/ScrollToTop.vue'
-
-const scrollToTop = () => {
-	window.scrollTo(0, 0)
-}
 </script>
 
 <template>
@@ -50,13 +47,13 @@ const scrollToTop = () => {
 				</a>
 				<ul class="nav col-md-4 justify-content-end">
 					<li class="nav-item">
-						<RouterLink class="nav-link px-2 text-body-secondary" to="/">Home</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link px-2 text-body-secondary" to="/">Home</RouterLink>
 					</li>
 					<li class="nav-item">
-						<RouterLink class="nav-link px-2 text-body-secondary" to="/rules">Rules</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link px-2 text-body-secondary" to="/rules">Rules</RouterLink>
 					</li>
 					<li class="nav-item">
-						<RouterLink class="nav-link px-2 text-body-secondary" to="/guides">Guides</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link px-2 text-body-secondary" to="/guides">Guides</RouterLink>
 					</li>
 				</ul>
 			</div>

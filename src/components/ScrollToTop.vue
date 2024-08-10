@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 <template>
     <Transition name="scroll-top">
         <div v-if="show" class="scroll-top__container">
-            <a v-smooth-scroll href="#">
+            <a href="#">
                 Go To Top
                 <i class="bi bi-arrow-up-circle-fill"></i>
             </a>
