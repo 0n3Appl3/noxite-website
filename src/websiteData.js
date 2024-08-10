@@ -25,7 +25,7 @@ export const faqs = [
     {
         id: 1,
         question: 'Why is it called Noxite?',
-        answer: 'Naming servers with "Craft", "SMP" and "PvP" in the name is getting old. The server\'s previous name, Appl3 PvP, came from an era when factions was a trendy gameplay style. Yes, you may know the name from the Noxcrew, but this server is not associated with them.'
+        answer: 'Naming servers with "Craft", "SMP" and "PvP" in the name is getting old. The server\'s previous name, Appl3 PvP, came from an era when factions were a trendy gameplay style. Yes, you may know the name from the Noxcrew, but this server is not associated with them.'
     },
     {
         id: 2,
@@ -35,17 +35,17 @@ export const faqs = [
     {
         id: 3,
         question: 'How long does it take to update the server to version 1.X?',
-        answer: 'Optimistically, up to four weeks. I am very fortunate to be able to develop my own plugins, which speeds up the updating process. Although, the server also uses plugins made by other developers who may take longer to update to the latest version, so it is sometimes difficult to give an ETA.'
+        answer: 'Optimistically, it takes up to four weeks. I am fortunate to develop plugins, which speed up the updating process. However, the server also uses plugins made by other developers, which may take longer to update to the latest version, so it is sometimes difficult to give an ETA.'
     },
     {
         id: 4,
         question: 'Where do I report server connection and plugin problems?',
-        answer: 'Please let 0n3Appl3 know on the Noxite discord server and he will resolve it at his earliest convenience.'
+        answer: 'Please let 0n3Appl3 know on the Noxite discord server, and he will resolve it at his earliest convenience.'
     },
     {
         id: 5,
         question: 'I want to be a moderator, where do I apply?',
-        answer: 'Moderator applications are not available at this time. The server is not busy enough to warrant a dedicated moderation team.'
+        answer: 'Moderator applications are not available at this time. The server needs to be more busy to warrant a dedicated moderation team.'
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ export const rules = [
     {
         id: 1,
         title: 'Be respectful and considerate',
-        description: 'Treat all players with respect and maintain a friendly atmosphere. Avoid offensive language, harrassment, or any behaviour that may create a negative experience for others.',
+        description: 'Treat all players with respect and maintain a friendly atmosphere. Avoid offensive language, harassment, or any behaviour that may create a negative experience for others.',
     },
     {
         id: 2,
@@ -67,32 +67,32 @@ export const rules = [
     {
         id: 3,
         title: 'No stealing',
-        description: 'Respect other players\' belongings and do not take items or resources that are not yours, unless explicitly allowed by the owner.',
+        description: 'Respect other players\' belongings and do not take items or resources that are not yours unless explicitly allowed by the owner.',
     },
     {
         id: 4,
         title: 'No cheating',
-        description: 'Do not use any hacks, mods, or exploits that give you an unfair advantage over other players. Play the game fairly and maintain a level playing field.',
+        description: 'Do not use hacks, mods, or exploits that give you an unfair advantage over other players. Play the game fairly and maintain a level playing field.',
     },
     {
         id: 5,
         title: 'No PvP without consent',
-        description: 'Do not engage in combat with other players unless both parties have agreed to it. Respect each player\'s choice to engage or avoid PvP.',
+        description: 'Do not engage in combat with other players unless both parties agree. Respect each player\'s choice to engage or avoid PvP.',
     },
     {
         id: 6,
         title: 'No offensive or innapropriate builds',
-        description: 'Construct buildings and structures that are suitable for all audiences. Avoid building anything that promotes discrimination, racism, or contains explicit content.',
+        description: 'Construct buildings and structures that are suitable for all audiences. Avoid building anything that promotes discrimination or racism or contains explicit content.',
     },
     {
         id: 7,
         title: 'No excessive redstone lag',
-        description: 'Avoid creating redstone contraptions or mechanisms that cause excessive server lag or slow down the gameplay for others.',
+        description: 'Avoid creating redstone contraptions or mechanisms that cause excessive server lag or slow the gameplay for others.',
     },
     {
         id: 8,
         title: 'No unauthorised mods to your game client',
-        description: 'Only use approved mods, texture packs, or resource packs that are allowed by the owner. Do not install or use any unauthorised software that may compromise the server or other players\' experiences. If you have any doubts, please contact 0n3Appl3.',
+        description: 'Only use approved mods, texture packs, or resource packs that the owner allows. Do not install or use unauthorised software that may compromise the server or other players\' experiences. If you have any doubts, please get in touch with 0n3Appl3.',
     },
     {
         id: 9,
@@ -107,6 +107,6 @@ export const rules = [
     {
         id: 11,
         title: 'Report any issues',
-        description: 'If you encounter any bugs, glitches, or rule violations, report them to the server staff or administrators promptly. Help create a better gaming experience for everyone.',
+        description: 'If you encounter bugs, glitches, or rule violations, report them to the server staff or administrators promptly. This will help create a better gaming experience for everyone.',
     },
 ]

@@ -25,7 +25,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 						<RouterLink @click="scrollToTop" class="nav-link" to="/guides">Guides</RouterLink>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://x.com/appl3pvp" target="_blank"><i class="bi bi-twitter-x h4"></i></a>
+						<a class="nav-link" href="https://x.com/noxite_nz" target="_blank"><i class="bi bi-twitter-x h4"></i></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="https://discord.gg/xnyMD2r" target="_blank"><i class="bi bi-discord h4"></i></a>

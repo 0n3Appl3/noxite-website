@@ -68,7 +68,7 @@ document.addEventListener('scroll', () => {
 		<h2>About Noxite</h2>
 		<br>
 		<p>Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
-		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server made the switch to survival in 2016 and have since strived to deliver an experience that is more relaxed and welcoming.</p>
+		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server switched to survival in 2016 and has since strived to deliver an experience that is more relaxed and welcoming.</p>
 	</div>
 	<div class="overlay-container" v-for="content in about" :key="content.id" >
 		<div class="bg grayscale" v-bind:style="{ backgroundImage: 'url(' + content.image + ')' }" data-type="background" data-speed=".6"></div>

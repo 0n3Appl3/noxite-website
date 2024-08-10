@@ -312,7 +312,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <p>Just like what we did for homes, let's go over all the commands you need to know.</p>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Add a New Waypoint</h6>
-                    <p>Go to the location you want to create a new home and enter the command below.</p>
+                    <p>Go to the location you want to create a new waypoint and enter the command below.</p>
                     <div class="card">
                         <div class="card-body">
                             <samp>/wp add [name]</samp>
