@@ -56,6 +56,54 @@ a.active {
   border-color: #dc3545 !important;
 }
 
+#snackbar {
+  visibility: hidden;
+  min-width: 220px;
+  margin: auto;
+  background-color: #191919;
+  border-radius: 2rem;
+  color: #eee;
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 32px;
+  font-size: 0.9rem;
+}
+
+#snackbar i {
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 32px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 32px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 32px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 32px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
 .accordion-button:not(.collapsed) {
   color: #58151c !important;
   background-color: #f8d7da !important;

@@ -12,7 +12,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <a href="#land-claiming" id="nav-land-claiming-tab" class="list-group-item list-group-item-action nav-link active" data-bs-toggle="tab" data-bs-target="#nav-land-claiming" role="tab" aria-controls="nav-land-claiming" aria-selected="true">Land Claiming</a>
                     <a href="#chest-shop" id="nav-chest-shop-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-chest-shop" role="tab" aria-controls="nav-chest-shop" aria-selected="true">Chest Shop</a>
                     <a href="#homes" id="nav-homes-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-homes" role="tab" aria-controls="nav-homes" aria-selected="true">Homes</a>
-                    <a href="#waypoints" id="nav-waypoints-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-waypoints" role="tab" aria-controls="nav-waypoints" aria-selected="true">Waypoints</a>
+                    <a href="#waypoints" id="nav-waypoints-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-waypoints" role="tab" aria-controls="nav-waypoints" aria-selected="true">Waypoints <span class="badge rounded-pill text-bg-secondary">New</span></a>
                     <a href="#teleportation" id="nav-teleportation-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-teleportation" role="tab" aria-controls="nav-teleportation" aria-selected="true">Teleportation</a>
                 </div>
             </div>
@@ -307,7 +307,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     </div>
                 </div>
                 <div id="nav-waypoints" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-waypoints-tab" tabindex="0">
-                    <h5><strong>Waypoints</strong></h5>
+                    <h5><strong>Waypoints</strong> <span class="badge rounded-pill text-bg-secondary" style="font-weight:normal;">New Feature</span></h5>
                     <p>Keep track of all your locations using waypoints. They are essentially homes without the teleportation feature, but then how do we get to our location? It is easy and a lot better than writing them down manually on a sheet of paper.</p>
                     <p>Just like what we did for homes, let's go over all the commands you need to know.</p>
                     <br>

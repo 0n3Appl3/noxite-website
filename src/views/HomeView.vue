@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { about, faqs } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
 
-const snackBar = document.getElementById("snackbar");
+let snackBar = ''
 function copyServerIP(ip) {
 	const el = document.createElement('textarea');
 
@@ -25,6 +25,7 @@ const setScrollAnimation = () => {
 
 onMounted(() => {
 	setScrollAnimation();
+	snackBar = document.getElementById("snackbar");
 })
 
 document.addEventListener('scroll', () => {
@@ -49,7 +50,12 @@ document.addEventListener('scroll', () => {
 			</div>
 		</div>
 	</div>
-	<div id="snackbar">IP saved to clipboard</div>
+	<div id="snackbar">
+		<div class="d-flex justify-content-center align-items-center">
+			<i class="bi bi-clipboard-fill"></i>
+			<span>IP copied to clipboard</span>
+		</div>
+	</div>
 </header>
 <CallToAction
 	title="Join our community on Discord" 
