@@ -1,5 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import ScrollToTop from './components/ScrollToTop.vue'
+
+const scrollToTop = () => {
+	window.scrollTo(0, 0)
+}
 </script>
 
 <template>
@@ -12,15 +17,15 @@ import { RouterLink, RouterView } from 'vue-router'
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-				<ul class="navbar-nav align-items-center">
+				<ul class="navbar-nav navbar-nav-scroll align-items-center">
 					<li class="nav-item">
-						<RouterLink class="nav-link" aria-current="page" to="/">Home</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link" aria-current="page" to="/">Home</RouterLink>
 					</li>
 					<li class="nav-item">
-						<RouterLink class="nav-link" to="/rules">Rules</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link" to="/rules">Rules</RouterLink>
 					</li>
 					<li class="nav-item">
-						<RouterLink class="nav-link" to="/guides">Guides</RouterLink>
+						<RouterLink @click="scrollToTop" class="nav-link" to="/guides">Guides</RouterLink>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="https://x.com/appl3pvp" target="_blank"><i class="bi bi-twitter-x h4"></i></a>
@@ -35,6 +40,7 @@ import { RouterLink, RouterView } from 'vue-router'
 	<div>
 		<RouterView />
 	</div>
+	<ScrollToTop/>
 	<footer class="bg-dark" data-bs-theme="dark">
 		<div class="container pt-4 pb-3" data-bs-theme="dark">
 			<div class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">

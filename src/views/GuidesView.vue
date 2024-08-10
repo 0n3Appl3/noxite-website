@@ -7,8 +7,8 @@ import StyledHeading from '../components/StyledHeading.vue'
     <StyledHeading title="Player Guides" background="./src/assets/thing_1.png" />
     <div class="container-sm py-5">
         <div class="row">
-            <div class="col-2 me-3">
-                <div id="nav-tab" class="list-group me-3" role="tablist">
+            <div class="col-lg-2 me-3 pb-5">
+                <div id="nav-tab" class="list-group" role="tablist">
                     <a href="#land-claiming" id="nav-land-claiming-tab" class="list-group-item list-group-item-action nav-link active" data-bs-toggle="tab" data-bs-target="#nav-land-claiming" role="tab" aria-controls="nav-land-claiming" aria-selected="true">Land Claiming</a>
                     <a href="#chest-shop" id="nav-chest-shop-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-chest-shop" role="tab" aria-controls="nav-chest-shop" aria-selected="true">Chest Shop</a>
                     <a href="#homes" id="nav-homes-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-homes" role="tab" aria-controls="nav-homes" aria-selected="true">Homes</a>
@@ -16,7 +16,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <a href="#teleportation" id="nav-teleportation-tab" class="list-group-item list-group-item-action nav-link" data-bs-toggle="tab" data-bs-target="#nav-teleportation" role="tab" aria-controls="nav-teleportation" aria-selected="true">Teleportation</a>
                 </div>
             </div>
-            <div id="nav-tabContent" class="col tab-content">
+            <div id="nav-tabContent" class="col-lg tab-content">
                 <div id="nav-land-claiming" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-land-claiming-tab" tabindex="0">
                     <h5><strong>Land Claiming</strong></h5>
                     <p>Protecting your builds is an integral aspect of the survival multiplayer experience. Let's keep those griefers away from your land. It's easy!</p>
@@ -384,7 +384,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     </div>
                 </div>
             </div>
-            <div class="col-2 me-3">
+            <div class="col-lg-2 me-3">
                 <div class="me-3">
                     
                 </div>
