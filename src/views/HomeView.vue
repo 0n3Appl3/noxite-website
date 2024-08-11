@@ -71,7 +71,7 @@ document.addEventListener('scroll', () => {
 		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server switched to survival in 2016 and has since strived to deliver an experience that is more relaxed and welcoming.</p>
 	</div>
 	<div class="overlay-container" v-for="content in about" :key="content.id" >
-		<div class="bg grayscale" v-bind:style="{ backgroundImage: 'url(' + content.image + ')' }" data-type="background" data-speed=".6"></div>
+		<div class="bg grayscale" :style="{ backgroundImage: `url('${ content.image }')` }" data-type="background" data-speed=".6"></div>
 		<div class="bg overlay red py-5 h-100"></div>
 		<div class="bg overlay">
 			<div class="container py-5 h-100">
