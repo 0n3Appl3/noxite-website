@@ -28,18 +28,21 @@ import StyledHeading from '../components/StyledHeading.vue'
                             <samp>/claim create [claim name]</samp>
                         </div>
                     </div>
-                    <div class="bs-callout"><strong>Note:</strong> Your claim names must be unique. For example, you cannot have multiple shops named 'My Base'.</div>
+                    <div class="bs-callout"><strong>Note:</strong> Your claim names must be unique. For example, you cannot have multiple claims named 'My Base'.</div>
                     <p>You will see a confirmation GUI. Click "Yes" to create your claim.</p>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Claim a Land Chunk</h6>
-                    <p>Make sure to stand in an area you want to project and enter the following command.</p>
+                    <p>Enter the following command.</p>
                     <div class="card">
                         <div class="card-body">
                             <samp>/claim chunk [claim name]</samp>
                         </div>
                     </div>
+                    <br>
+                    <p>You will enter claiming mode, and a chunk map will appear on the right side of your screen. Find an unclaimed chunk of land and type "claim" in the server chat.</p>
                     <div class="bs-callout"><strong>Note:</strong> The term "chunk" refers to a 16x16 block area in Minecraft, so claiming chunks means to protect a 16x16 area of land.</div>
                     <p>Once again, a confirmation GUI will appear. Click "Yes" to claim the chunk.</p>
+                    <div class="bs-callout"><strong>Note:</strong> You will remain in claiming mode until you type "cancel" in the server chat to exit without futher changes.</div>
                     <p>You did it! You made a claim and claimed a chunk. Protect as many chunks as you want for your claim. If you own more than one claim, ensure you specified the correct one.</p>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Delete a Claim</h6>
@@ -52,12 +55,15 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <div class="bs-callout bs-callout-danger"><strong>Danger:</strong> Be careful when executing this command. This action cannot be reversed.</div>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Delete a Claimed Land Chunk</h6>
-                    <p>Just like removing claims, you can also remove claim chunks. Enter the following command.</p>
+                    <p>Just like removing claims, you can also remove claim chunks. Enter the following command. Enter the chunk name if you know which area you want to unclaim, otherwise leave it blank.</p>
                     <div class="card">
                         <div class="card-body">
-                            <samp>/claim deletechunk [claim name]</samp>
+                            <samp>/claim deletechunk [chunk]</samp>
                         </div>
                     </div>
+                    <br>
+                    <p>If you didn't specify a chunk, you will enter unclaiming mode. A chunk map will appear on the right side of your screen. Find an unclaimed chunk of land and type "remove" in the server chat.</p>
+                    <div class="bs-callout"><strong>Note:</strong> You will remain in unclaiming mode until you type "cancel" in the server chat to exit without futher changes.</div>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Rename a Claim</h6>
                     <p>Don't like the name of your name? No problem, you can easily rename your claim by entering the following command.</p>
