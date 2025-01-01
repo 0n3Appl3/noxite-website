@@ -2,6 +2,8 @@
 import { RouterLink, RouterView } from 'vue-router'
 import scrollToTop from './scrollToTop'
 import ScrollToTop from './components/ScrollToTop.vue'
+
+const year = new Date().getFullYear()
 </script>
 
 <template>
@@ -25,7 +27,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 						<RouterLink @click="scrollToTop" class="nav-link" to="/guides">Guides</RouterLink>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://x.com/noxite_nz" target="_blank"><i class="bi bi-twitter-x h4"></i></a>
+						<a class="nav-link" href="https://bsky.app/profile/noxitenz.bsky.social" target="_blank"><i class="bi bi-bluesky h4"></i></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="https://discord.gg/xnyMD2r" target="_blank"><i class="bi bi-discord h4"></i></a>
@@ -41,7 +43,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 	<footer class="bg-dark" data-bs-theme="dark">
 		<div class="container pt-4 pb-3" data-bs-theme="dark">
 			<div class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-				<p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Noxite, by 0n3Appl3</p>
+				<p class="col-md-4 mb-0 text-body-secondary">&copy; {{ year }} Noxite, by 0n3Appl3</p>
 				<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 					<img src="../src/assets/noxite-icon.png" class="bi me-2" alt="Noxite Logo" width="40px" height="40px">
 				</a>
@@ -62,5 +64,14 @@ import ScrollToTop from './components/ScrollToTop.vue'
 </template>
 
 <style scoped>
-
+.bi-bluesky::before {
+    content: "";
+    background-color: currentColor;
+    -webkit-mask: url("../src/assets/bluesky.svg") no-repeat 50% 50%;
+    mask: url("../src/assets/bluesky.svg") no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 20px;
+    width: 23px;
+}
 </style>
