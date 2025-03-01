@@ -133,7 +133,7 @@ import StyledHeading from '../components/StyledHeading.vue'
                     <div class="bs-callout"><strong>Note:</strong> If you know the chunk ID, you can enter it in the command after the "chunkinfo" argument.</div>
                     <br>
                     <h6 class="border-bottom pb-2 mb-4">Manage Your Claims</h6>
-                    <p>There are four commands you need to know to manage your claims.</p>
+                    <p>There are six commands you need to know to manage your claims.</p>
                     <strong>Member Management</strong>
                     <p>You can add and remove people from your claims by entering the following command.</p>
                     <div class="card">
@@ -141,11 +141,26 @@ import StyledHeading from '../components/StyledHeading.vue'
                             <samp>/claim members [add/remove] [username] [claim name]</samp>
                         </div>
                     </div>
-                    <br>
+                    <div class="bs-callout"><strong>Note:</strong> Adding a member will automatically grant chest access to the claim. Removing a member will yield the opposite effect.</div>
                     <p>To view who has access to your claim, enter the following command. A menu GUI will display player heads of all the members and clicking them revokes their access.</p>
                     <div class="card">
                         <div class="card-body">
                             <samp>/claim members list [claim name]</samp>
+                        </div>
+                    </div>
+                    <br>
+                    <strong>Chest Access Management</strong>
+                    <p>You can add and remove people's access to your claim's chests by entering the following command.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/claim chestaccess [add/remove] [username] [claim name]</samp>
+                        </div>
+                    </div>
+                    <div class="bs-callout"><strong>Note:</strong> This grants access to chests, barrels, enderchests, trapped chests and shulker boxes.</div>
+                    <p>To view who has access to your chests, enter the following command. A menu GUI will display player heads of all the members and clicking them revokes their access.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <samp>/claim chestaccess list [claim name]</samp>
                         </div>
                     </div>
                     <br>
@@ -166,6 +181,10 @@ import StyledHeading from '../components/StyledHeading.vue'
                         </thead>
                         <tbody>
                             <tr>
+                                <td>Chest Protection</td>
+                                <td>Restricts who can access chests in your claim. See "Chest Access Management" to manage chest access.</td>
+                            </tr>
+                            <tr>
                                 <td>Hostile Mob Spawn</td>
                                 <td>Allow hostile mobs to spawn in your claim. This will not affect already spawned hostile mobs. It only prevents future spawns.</td>
                             </tr>
@@ -184,6 +203,10 @@ import StyledHeading from '../components/StyledHeading.vue'
                             <tr>
                                 <td>Explosions</td>
                                 <td>Allows any type of explosive to destroy blocks.</td>
+                            </tr>
+                            <tr>
+                                <td>Crop Griefing</td>
+                                <td>Allows players to trample crops.</td>
                             </tr>
                         </tbody>
                     </table>
