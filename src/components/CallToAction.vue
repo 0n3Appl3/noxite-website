@@ -1,39 +1,35 @@
+<!-- Save as src/components/CallToAction.vue -->
 <script setup>
 import scrollToTop from '../scrollToTop'
 
 defineProps({
-    title: String,
-    description: String,
-    link: String,
-    website: String,
-    buttonText: String,
+  title: String,
+  description: String,
+  link: String,
+  website: String,
+  buttonText: String
 })
 
 const openWebsite = (url) => {
-    window.open(url, '_blank')
+  window.open(url, '_blank')
 }
 </script>
 
 <template>
-<div class="bg-secondary-subtle border-top border-bottom">
-	<div class="container mx-auto row align-items-center py-5">
-		<div class="col-md">
-			<h3>{{ title }}</h3>
-			<p>{{ description }}</p>
-		</div>
-		<div class="col-md">
-			<RouterLink @click="scrollToTop" :to="link" v-if="link">
-				<button type="button" class="btn btn-danger noxite-button float-md-end px-4 py-2 mt-3">
-					<i class="bi bi-arrow-right"></i>{{ buttonText }}
-				</button>
-			</RouterLink>
-            <button type="button" class="btn btn-danger noxite-button float-md-end px-4 py-2 mt-3" @click="openWebsite(website)" v-if="website">
-                <i class="bi bi-arrow-right"></i>{{ buttonText }}
-            </button>
-		</div>
-	</div>
-</div>
+  <div class="border-y-4 border-night/5 bg-coral-light">
+    <div class="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-semibold text-night">{{ title }}</h3>
+        <p class="text-night/70 mt-1">{{ description }}</p>
+      </div>
+      <RouterLink v-if="link" :to="link" @click="scrollToTop">
+        <button type="button" class="btn-game btn-game-coral">
+          {{ buttonText }}
+        </button>
+      </RouterLink>
+      <button v-if="website" type="button" class="btn-game btn-game-coral" @click="openWebsite(website)">
+        {{ buttonText }}
+      </button>
+    </div>
+  </div>
 </template>
-
-<style scoped>
-</style>

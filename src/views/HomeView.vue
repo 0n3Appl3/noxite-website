@@ -1,111 +1,120 @@
+<!-- Save as src/views/HomeView.vue -->
 <script setup>
-import { onMounted } from 'vue'
-import { about, faqs } from '../websiteData'
+import { ref } from 'vue'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { ChevronDownIcon, ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline'
+import { ShieldCheckIcon, HomeIcon, MapPinIcon, MoonIcon, CubeIcon, ChatBubbleLeftRightIcon } from '@heroicons/vue/24/outline'
+import { features, faqs } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
+import DonateSection from '../components/DonateSection.vue'
 
-let snackBar = ''
-function copyServerIP(ip) {
-	const el = document.createElement('textarea');
+const icons = { ShieldCheckIcon, HomeIcon, MapPinIcon, MoonIcon, CubeIcon, ChatBubbleLeftRightIcon }
 
-	el.value = ip;
-	document.body.appendChild(el);
-	el.select();
-	document.execCommand("copy");
-	document.body.removeChild(el);
-
-	snackBar.className = "show";
-	setTimeout(function(){ snackBar.className = snackBar.className.replace("show", ""); }, 3000);
+const showSnackbar = ref(false)
+async function copyServerIP(ip) {
+  await navigator.clipboard.writeText(ip)
+  showSnackbar.value = true
+  setTimeout(() => (showSnackbar.value = false), 2500)
 }
-
-const setScrollAnimation = () => {
-    Array.from(document.querySelectorAll('*[data-type="background"]')).forEach(e => {   
-		e.style.scale = window.scrollY * e.dataset.speed / window.innerHeight
-    });
-}
-
-onMounted(() => {
-	setScrollAnimation();
-	snackBar = document.getElementById("snackbar");
-})
-
-document.addEventListener('scroll', () => {
-    setScrollAnimation();
-});
 </script>
 
 <template>
-<header>
-	<div class="overlay"></div>
-	<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-		<source src="../assets/noxite-bkg.mp4" type="video/mp4">
-	</video>
-	<div class="container h-100">
-		<div class="d-flex h-100 align-items-center">
-			<div class="text-white">
-				<h1>Survive together</h1>
-				<p class="lead mb-0">Minecraft multiplayer hosted in New Zealand</p>
-				<button type="button" @click="copyServerIP('play.noxite.co.nz')" class="btn btn-danger noxite-button px-4 py-2 mt-5">
-					<i class="bi bi-arrow-right"></i>Connect
-				</button>
-			</div>
-		</div>
-	</div>
-	<div id="snackbar">
-		<div class="d-flex justify-content-center align-items-center">
-			<i class="bi bi-clipboard-fill"></i>
-			<span>IP copied to clipboard</span>
-		</div>
-	</div>
-</header>
-<CallToAction
-	title="Join our community on Discord" 
-	description="Send server chat messages to fellow players from the comfort of your mobile device!"
-	website="https://discord.gg/xnyMD2r"
-	buttonText="Join Discord"
-/>
-<main>
-	<div class="container py-5">
-		<h2>About Noxite</h2>
-		<br>
-		<p>Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
-		<p>It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be completely honest, it ran more like a survival server than a factions one, and the PvP community were not necessarily the nicest people to be around; that is not to say everyone was badly behaved. The server switched to survival in 2016 and has since strived to deliver an experience that is more relaxed and welcoming.</p>
-	</div>
-	<div class="overlay-container" v-for="content in about" :key="content.id" >
-		<div class="bg grayscale" :style="{ backgroundImage: `url('${ content.image }')` }" data-type="background" data-speed=".6"></div>
-		<div class="bg overlay red py-5 h-100"></div>
-		<div class="bg overlay">
-			<div class="container py-5 h-100">
-				<div class="d-flex h-100 align-items-center">
-					<div class="text-white">
-						<h3 class="pb-4"><i class="bi pe-3" :class="content.icon"></i>{{ content.title }}</h3>
-						<p class="lead mb-0">{{ content.description }}</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-sm py-5">
-		<h2>FAQ</h2>
-		<div class="accordion accordion-flush">
-			<div class="accordion-item" v-for="faq in faqs" :key="faq.id" :id="faq.id">
-				<h5 class="accordion-header">
-					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + faq.id" :aria-controls="'collapse' + faq.id" aria-expanded="false">
-						{{ faq.question }}
-					</button>
-				</h5>
-				<div :id="'collapse' + faq.id" class="accordion-collapse collapse" :data-bs-parent="'#faq' + faq.id">
-					<div class="accordion-body">
-						{{ faq.answer }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</main>
-<CallToAction
-	title="Learn about our custom plugins" 
-	description="All of Noxite's core plugins are custom-made and you can read all about it here."
-	link="/guides"
-	buttonText="Read Guides"
-/>
+  <header class="relative h-[85vh] min-h-[520px] overflow-hidden">
+    <video playsinline autoplay muted loop class="absolute inset-0 h-full w-full object-cover">
+      <source src="../assets/noxite-bkg.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-transparent"></div>
+    <div class="relative mx-auto flex h-full max-w-6xl items-center px-4">
+      <div class="text-white">
+        <h1 class="text-5xl md:text-6xl font-display font-semibold">Survive together</h1>
+        <p class="mt-2 text-lg md:text-xl text-cream/90">Minecraft multiplayer hosted in New Zealand</p>
+        <button
+          type="button"
+          @click="copyServerIP('play.noxite.co.nz')"
+          class="btn-game btn-game-coral mt-8"
+        >
+          <ClipboardIcon class="h-5" />
+          play.noxite.co.nz
+        </button>
+      </div>
+    </div>
+
+    <Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0 translate-y-3"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-3"
+    >
+      <div
+        v-if="showSnackbar"
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-2xl bg-night text-cream px-4 py-3 shadow-pop"
+      >
+        <ClipboardDocumentCheckIcon class="h-5 w-5 text-grass" />
+        <span class="text-sm font-semibold">IP copied to clipboard</span>
+      </div>
+    </Transition>
+  </header>
+
+  <CallToAction
+    title="Join our community on Discord"
+    description="Send server chat messages to fellow players from the comfort of your mobile device!"
+    website="https://discord.gg/xnyMD2r"
+    buttonText="Join Discord"
+  />
+
+  <main>
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center">
+      <h2 class="text-3xl font-semibold">About Noxite</h2>
+      <p class="mt-4 text-night/70">Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
+      <p class="mt-3 text-night/70">
+        It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be
+        completely honest, it ran more like a survival server than a factions one, and the PvP
+        community were not necessarily the nicest people to be around; that is not to say everyone
+        was badly behaved. The server switched to survival in 2016 and has since strived to deliver
+        an experience that is more relaxed and welcoming.
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-6xl px-4 pb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        v-for="feature in features"
+        :key="feature.id"
+        class="rounded-xl2 bg-white shadow-pop p-6"
+      >
+        <div class="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-coral text-white">
+          <component :is="icons[feature.icon]" class="h-6 w-6" />
+        </div>
+        <h3 class="text-xl font-semibold">{{ feature.title }}</h3>
+        <p class="mt-2 text-night/70 text-sm">{{ feature.description }}</p>
+      </div>
+    </div>
+
+    <DonateSection />
+
+    <div class="mx-auto max-w-3xl px-4 pb-20 pt-20">
+      <h2 class="text-3xl font-semibold text-center">FAQ</h2>
+      <div class="mt-8 space-y-3">
+        <Disclosure v-for="faq in faqs" :key="faq.id" v-slot="{ open }">
+          <div class="rounded-2xl bg-white shadow-pop overflow-hidden">
+            <DisclosureButton class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-display font-semibold">
+              {{ faq.question }}
+              <ChevronDownIcon class="h-5 w-5 shrink-0 text-coral transition-transform" :class="{ 'rotate-180': open }" />
+            </DisclosureButton>
+            <DisclosurePanel class="px-5 pb-5 text-night/70 text-sm">
+              {{ faq.answer }}
+            </DisclosurePanel>
+          </div>
+        </Disclosure>
+      </div>
+    </div>
+  </main>
+
+  <CallToAction
+    title="Learn about our custom plugin"
+    description="All of Noxite's core functionality is powered by One Engine, our custom all-in-one SMP plugin."
+    link="/guides"
+    buttonText="Read Guides"
+  />
 </template>

@@ -1,60 +1,35 @@
-<script setup lang="ts">
-import { ref } from 'vue'
+<!-- Save as src/components/ScrollToTop.vue -->
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { ArrowUpCircleIcon } from '@heroicons/vue/24/solid'
+import scrollToTop from '@/scrollToTop'
 
-let show = ref(false)
+const show = ref(false)
 
-window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        show.value = true
-    } else {
-        show.value = false
-    }
-})
+const onScroll = () => {
+  show.value = window.scrollY > 100
+}
+
+onMounted(() => window.addEventListener('scroll', onScroll))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <template>
-    <Transition name="scroll-top">
-        <div v-if="show" class="scroll-top__container">
-            <a href="#">
-                Go To Top
-                <i class="bi bi-arrow-up-circle-fill"></i>
-            </a>
-        </div>
-    </Transition>
+  <Transition
+    enter-active-class="transition duration-300 ease-out"
+    enter-from-class="opacity-0 translate-y-3"
+    enter-to-class="opacity-100 translate-y-0"
+    leave-active-class="transition duration-200 ease-in"
+    leave-from-class="opacity-100 translate-y-0"
+    leave-to-class="opacity-0 translate-y-3"
+  >
+    <button
+      v-if="show"
+      @click="scrollToTop"
+      class="fixed bottom-4 right-4 z-30 flex items-center gap-2 rounded-full bg-night text-cream pl-3 pr-4 py-2 text-sm font-display font-semibold shadow-pop hover:bg-coral transition-colors"
+    >
+      <ArrowUpCircleIcon class="h-5 w-5" />
+      Go To Top
+    </button>
+  </Transition>
 </template>
-
-<style scoped>
-a {
-    display: flex;
-    text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0 0.6rem;
-    border-radius: 2rem;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--color-text);
-    background-color: var(--color-text);
-    color: var(--color-background);
-    transition: all 0.15s ease-in-out;
-}
-a:hover {
-    background-color: var(--color-background);
-    color: var(--color-text);
-}
-i {
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-}
-.scroll-top__container {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-}
-.scroll-top-enter-active, .scroll-top-leave-active  {
-  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.scroll-top-enter-from, .scroll-top-leave-to {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-</style>

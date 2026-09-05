@@ -1,199 +1,62 @@
-@import './base.css';
+/* Save this as src/assets/main.css (replaces the old Bootstrap-based file) */
 
-#app {
-  padding-top: 64.5px;
-  margin: 0 auto;
-  font-weight: normal;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
+/*
+  Anisette Std is a paid font (Sudtipos) and isn't available on Google Fonts,
+  so it has to be self-hosted. Once you have a licensed copy:
+  1. Drop the font files (woff2 preferred) in src/assets/fonts/
+  2. Update the src paths below to match the filenames you were given
+  3. Uncomment this block
 
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.2;
-  z-index: 1;
-}
-
-button.accordion-button:focus {
-  outline: 0 !important;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
-}
-
-a.active {
-  background-color: #dc3545 !important;
-  border-color: #dc3545 !important;
-}
-
-#snackbar {
-  visibility: hidden;
-  min-width: 220px;
-  margin: auto;
-  background-color: #191919;
-  border-radius: 2rem;
-  color: #eee;
-  text-align: center;
-  padding: 0.7rem 1.5rem;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 32px;
-  font-size: 0.9rem;
-}
-
-#snackbar i {
-  font-size: 1.3rem;
-  padding-right: 0.5rem;
-}
-
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 32px; opacity: 1;}
-}
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 32px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 32px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 32px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-
-.accordion-button:not(.collapsed) {
-  color: #58151c !important;
-  background-color: #f8d7da !important;
-}
-
-.bg, .bg-alt {
-  background-position: center;
-  width: 100%;
-  overflow: hidden;
-}
-
-.bg {
-  height: 80vh;
-}
-
-.bg-alt {
-  height: 20vh;
-}
-
-.grayscale {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-.overlay-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.overlay {
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-
-.overlay.red {
-  background-color: #db2b39;
-  mix-blend-mode: overlay;
-  -webkit-filter: brightness(80%);
-  filter: brightness(80%);
-}
-
-.page-full-height {
-  min-height: 90vh;
-}
-
-.bs-callout {
-  margin: 20px 0;
-  padding: 15px 30px 15px 15px;
-  border-left: 5px solid #eee;
-  background-color: #f8f9fa;
-}
-.bs-callout h4 {
-  margin-top: 0;
-}
-.bs-callout p:last-child {
-  margin-bottom: 0;
-}
-.bs-callout code,
-.bs-callout .highlight {
-  background-color: #fff;
-}
-
-/* Themes for different contexts */
-.bs-callout-danger {
-  background-color: #fcf2f2;
-  border-color: #dFb5b4;
-}
-.bs-callout-warning {
-  background-color: #fefbed;
-  border-color: #f1e7bc;
-}
-.bs-callout-info {
-  background-color: #f0f7fd;
-  border-color: #d0e3f0;
-}
-
-.noxite-button {
-  font-family: "anisette-std", sans-serif;
+@font-face {
+  font-family: 'Anisette Std';
+  src: url('./fonts/AnisetteStd-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  text-transform: uppercase;
+  font-display: swap;
+}
+*/
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-ink bg-cream antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
 }
 
-.noxite-button i {
-  padding-right: 12px;
-}
+@layer components {
+  /* Chunky "pressable" game button used for every primary call to action */
+  .btn-game {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl font-display font-semibold
+           px-6 py-3 text-white shadow-bump transition-transform duration-150
+           hover:-translate-y-0.5 active:translate-y-1 active:shadow-none;
+  }
+  .btn-game-coral { @apply bg-coral hover:bg-coral-dark; }
+  .btn-game-grass { @apply bg-grass hover:bg-grass-dark; }
+  .btn-game-gold  { @apply bg-gold text-night hover:bg-gold-dark; }
 
-.claim-map-block {
-  padding: 0rem 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 2rem;
+  .pill-link {
+    @apply rounded-full px-4 py-2 font-display font-semibold text-sm transition-colors duration-150;
+  }
+
+  .callout {
+    @apply rounded-2xl border-2 px-4 py-3 my-4 text-sm;
+  }
+  .callout-note    { @apply bg-grass-light border-grass text-grass-dark; }
+  .callout-warning { @apply bg-gold-light border-gold text-gold-dark; }
+  .callout-danger  { @apply bg-coral-light border-coral text-coral-dark; }
+
+  .command-block {
+    @apply block rounded-2xl bg-night text-gold font-mono text-sm px-4 py-3 my-3 shadow-pop;
+  }
 }
