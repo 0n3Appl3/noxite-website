@@ -1,13 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon, ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline'
-import { ShieldCheckIcon, HomeIcon, MapPinIcon, MoonIcon, CubeIcon, ChatBubbleLeftRightIcon } from '@heroicons/vue/24/outline'
-import { features, faqs } from '../websiteData'
+import { features, faqs, showcaseImages } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
 import DonateSection from '../components/DonateSection.vue'
+import ShowcaseRow from '../components/ShowcaseRow.vue'
 
-const icons = { ShieldCheckIcon, HomeIcon, MapPinIcon, MoonIcon, CubeIcon, ChatBubbleLeftRightIcon }
+// Split the 6 features into two groups of 3, one per showcase row.
+const featuresRowOne = computed(() => features.slice(0, 3))
+const featuresRowTwo = computed(() => features.slice(3, 6))
 
 const showSnackbar = ref(false)
 async function copyServerIP(ip) {
@@ -73,18 +75,21 @@ async function copyServerIP(ip) {
       </p>
     </div>
 
-    <div class="mx-auto max-w-6xl px-4 pb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" v-scroll-reveal-group>
-      <div
-        v-for="feature in features"
-        :key="feature.id"
-        class="rounded-xl2 bg-white shadow-pop p-6"
-      >
-        <div class="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-coral text-white">
-          <component :is="icons[feature.icon]" class="h-6 w-6" />
-        </div>
-        <h3 class="text-xl font-semibold">{{ feature.title }}</h3>
-        <p class="mt-2 text-night/70 text-sm">{{ feature.description }}</p>
-      </div>
+    <div>
+      <ShowcaseRow
+        v-scroll-reveal
+        :image="showcaseImages[0].image"
+        :alt="showcaseImages[0].alt"
+        align="left"
+        :items="featuresRowOne"
+      />
+      <ShowcaseRow
+        v-scroll-reveal
+        :image="showcaseImages[1].image"
+        :alt="showcaseImages[1].alt"
+        align="right"
+        :items="featuresRowTwo"
+      />
     </div>
 
     <DonateSection />
@@ -98,9 +103,18 @@ async function copyServerIP(ip) {
               {{ faq.question }}
               <ChevronDownIcon class="h-5 w-5 shrink-0 text-coral transition-transform" :class="{ 'rotate-180': open }" />
             </DisclosureButton>
-            <DisclosurePanel class="px-5 pb-5 text-night/70 text-sm">
-              {{ faq.answer }}
-            </DisclosurePanel>
+            <transition
+              enter-active-class="transition-all duration-300 ease-out overflow-hidden"
+              enter-from-class="opacity-0 max-h-0"
+              enter-to-class="opacity-100 max-h-96"
+              leave-active-class="transition-all duration-200 ease-in overflow-hidden"
+              leave-from-class="opacity-100 max-h-96"
+              leave-to-class="opacity-0 max-h-0"
+            >
+              <DisclosurePanel class="px-5 pb-5 text-night/70 text-sm">
+                {{ faq.answer }}
+              </DisclosurePanel>
+            </transition>
           </div>
         </Disclosure>
       </div>

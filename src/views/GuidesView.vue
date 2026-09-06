@@ -56,7 +56,7 @@ const tabs = ['Land Claiming', 'Homes', 'Waypoints', 'Teleportation']
                 </div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Claim Options</h4>
-                <p class="mt-3 text-night/70">Each claim group has toggleable settings, editable by Managers from the options menu (found via /claim list, or directly for the claim you're standing on).</p>
+                <p class="mt-3 text-night/70">Each claim group has toggleable settings, editable by Managers from the options menu (found via <code class="command-block inline">/claim list</code>, or directly for the claim you're standing on).</p>
                 <code class="command-block">/claim options</code>
                 <div class="overflow-x-auto rounded-2xl shadow-pop mt-4">
                   <table class="w-full text-sm">

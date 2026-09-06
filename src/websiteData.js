@@ -37,6 +37,25 @@ export const features = [
     description: "Chat with the server from your phone. Messages sync both ways between Discord and in-game chat, so you're never out of the loop."
   }
 ]
+
+// Two hero-sized photos for the "About Noxite" showcase rows on the homepage.
+// Each pairs with 3 of the `features` entries above (features[0-2] with the
+// first image, features[3-5] with the second). Drop your own screenshots into
+// src/assets/ - wide, landscape-ish shots work best since they're cropped to
+// fill a ~520px-tall banner.
+export const showcaseImages = [
+  {
+    id: 1,
+    image: new URL('./assets/thing_1.png', import.meta.url).href,
+    alt: 'A view of the Noxite spawn area'
+  },
+  {
+    id: 2,
+    image: new URL('./assets/thing_2.png', import.meta.url).href,
+    alt: 'A player-built base on the Noxite server'
+  }
+]
+
 export const donatorPerks = [
   {
     id: 1,

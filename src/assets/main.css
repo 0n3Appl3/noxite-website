@@ -38,10 +38,15 @@
     @apply rounded-2xl border-2 px-4 py-3 my-4 text-sm;
   }
   .callout-note    { @apply bg-grass-light border-grass text-grass-dark; }
-  .callout-warning { @apply bg-gold-light border-gold text-gold-dark; }
+  .callout-warning { @apply bg-gold-light border-gold text-night; }
   .callout-danger  { @apply bg-coral-light border-coral text-coral-dark; }
 
   .command-block {
-    @apply block rounded-2xl bg-night text-gold font-mono text-sm px-4 py-3 my-3 shadow-pop;
+    @apply block rounded-xl bg-night/95 text-neutral-300 font-mono text-sm px-4 py-3 my-3 shadow-sm;
+  }
+
+  .command-block.inline {
+    display: inline;
+    @apply rounded-md bg-night/10 text-night font-mono text-[0.85em] px-1.5 py-0.5 my-0 shadow-none;
   }
 }

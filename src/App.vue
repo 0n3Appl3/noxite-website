@@ -60,7 +60,6 @@ const navLinks = [
           {{ link.label }}
         </RouterLink>
         <div class="flex gap-2 pt-2">
-          <a href="https://bsky.app/profile/noxitenz.bsky.social" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Bluesky</a>
           <a href="https://discord.gg/xnyMD2r" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Discord</a>
         </div>
       </div>

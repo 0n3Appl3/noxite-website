@@ -13,6 +13,10 @@ const icons = { UserPlusIcon, HomeModernIcon, PaintBrushIcon, StarIcon, GiftIcon
 
 // TODO: replace with your real store/Patreon/Ko-fi link.
 const donateLink = 'https://noxite.co.nz/donate'
+
+// TODO: swap in a real banner screenshot (e.g. a donator-only build, or the
+// hats/skulls perk in action) at src/assets/donate-banner.png
+const bannerImage = new URL('../assets/thing_1.png', import.meta.url).href
 </script>
 
 <template>
@@ -24,6 +28,15 @@ const donateLink = 'https://noxite.co.nz/donate'
           Noxite is free to play and always will be. If you'd like to help cover hosting costs,
           donating unlocks a handful of extra perks as a thank you.
         </p>
+      </div>
+
+      <div class="mt-8 overflow-hidden rounded-2xl shadow-pop" v-scroll-reveal>
+        <img
+          :src="bannerImage"
+          alt="A donator-decorated build on the Noxite server"
+          class="h-56 w-full object-cover md:h-72"
+          loading="lazy"
+        />
       </div>
 
       <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" v-scroll-reveal-group>
@@ -41,7 +54,7 @@ const donateLink = 'https://noxite.co.nz/donate'
           Become a Donator
         </a>
         <p class="mt-3 text-xs text-cream/50">
-          Donations support server hosting only — they never affect gameplay balance.
+          Donations support server hosting only and never affect gameplay balance.
         </p>
       </div>
     </div>
