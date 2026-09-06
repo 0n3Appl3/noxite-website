@@ -16,7 +16,7 @@ export const features = [
     id: 3,
     icon: 'MapPinIcon',
     title: 'Waypoints',
-    description: 'Track any location on the map without teleporting to it. A tracker shows the distance and direction until you arrive on foot.'
+    description: 'Track any of your homes without teleporting to it. A boss bar shows how far away you are until you arrive on foot.'
   },
   {
     id: 4,

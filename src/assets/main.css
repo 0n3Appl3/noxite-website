@@ -1,24 +1,6 @@
-/* Save this as src/assets/main.css (replaces the old Bootstrap-based file) */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-  Anisette Std is a paid font (Sudtipos) and isn't available on Google Fonts,
-  so it has to be self-hosted. Once you have a licensed copy:
-  1. Drop the font files (woff2 preferred) in src/assets/fonts/
-  2. Update the src paths below to match the filenames you were given
-  3. Uncomment this block
-
-@font-face {
-  font-family: 'Anisette Std';
-  src: url('./fonts/AnisetteStd-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-*/
 
 @layer base {
   html {
@@ -29,8 +11,11 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
-    font-weight: bolder;
+    font-weight: 700 !important;
     text-transform: uppercase;
+  }
+  h1, h2 {
+    font-weight: 900 !important;
   }
 }
 

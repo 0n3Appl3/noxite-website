@@ -1,4 +1,3 @@
-<!-- Save as src/views/HomeView.vue -->
 <script setup>
 import { ref } from 'vue'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
@@ -65,19 +64,16 @@ async function copyServerIP(ip) {
   />
 
   <main>
-    <div class="mx-auto max-w-3xl px-4 py-16 text-center">
-      <h2 class="text-3xl font-semibold">About Noxite</h2>
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center" v-scroll-reveal>
+      <h2 class="text-3xl font-semibold">Welcome to Noxite</h2>
       <p class="mt-4 text-night/70">Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
       <p class="mt-3 text-night/70">
-        It first opened in 2015 under the old name Appl3 PvP as a small factions community. To be
-        completely honest, it ran more like a survival server than a factions one, and the PvP
-        community were not necessarily the nicest people to be around; that is not to say everyone
-        was badly behaved. The server switched to survival in 2016 and has since strived to deliver
+        The server first opened in 2015 under the old name Appl3 PvP as a small factions community. A year later, we became to an SMP in 2016 and has since strived to deliver
         an experience that is more relaxed and welcoming.
       </p>
     </div>
 
-    <div class="mx-auto max-w-6xl px-4 pb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mx-auto max-w-6xl px-4 pb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" v-scroll-reveal-group>
       <div
         v-for="feature in features"
         :key="feature.id"
@@ -94,8 +90,8 @@ async function copyServerIP(ip) {
     <DonateSection />
 
     <div class="mx-auto max-w-3xl px-4 pb-20 pt-20">
-      <h2 class="text-3xl font-semibold text-center">FAQ</h2>
-      <div class="mt-8 space-y-3">
+      <h2 class="text-3xl font-semibold text-center" v-scroll-reveal>FAQ</h2>
+      <div class="mt-8 space-y-3" v-scroll-reveal-group>
         <Disclosure v-for="faq in faqs" :key="faq.id" v-slot="{ open }">
           <div class="rounded-2xl bg-white shadow-pop overflow-hidden">
             <DisclosureButton class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-display font-semibold">

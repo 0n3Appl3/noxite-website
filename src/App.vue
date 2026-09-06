@@ -1,4 +1,3 @@
-<!-- Save as src/App.vue -->
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'

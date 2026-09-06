@@ -1,4 +1,3 @@
-<!-- Save as src/views/RulesView.vue -->
 <script setup>
 import StyledHeading from '../components/StyledHeading.vue'
 import { rules } from '../websiteData'
@@ -16,21 +15,17 @@ import { rules } from '../websiteData'
         These rules may change at any point and the moderation team have the final say.
       </p>
 
-      <div class="mt-10 space-y-4">
-        <div
-          v-for="rule in rules"
-          :key="rule.id"
-          class="flex gap-4 rounded-2xl bg-white p-5 shadow-pop"
-        >
-          <div class="grid h-9 w-9 shrink-0 place-items-center rounded-full font-display font-semibold bg-coral text-white">
-            {{ rule.id }}
-          </div>
-          <div>
-            <h5 class="font-display font-semibold">{{ rule.title }}</h5>
-            <p class="mt-1 text-sm text-night/70">{{ rule.description }}</p>
-          </div>
+      <div class="mt-10 space-y-4" v-scroll-reveal-group>
+      <div v-for="rule in rules" :key="rule.id" class="flex gap-4 rounded-2xl bg-white p-5 shadow-pop">
+        <div class="grid h-9 w-9 shrink-0 place-items-center rounded-full font-display font-semibold bg-coral text-white">
+          {{ rule.id }}
+        </div>
+        <div>
+          <h5 class="font-display font-semibold">{{ rule.title }}</h5>
+          <p class="mt-1 text-sm text-night/70">{{ rule.description }}</p>
         </div>
       </div>
+    </div>
     </div>
   </main>
 </template>
