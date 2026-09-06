@@ -41,6 +41,7 @@ const props = defineProps({
         :class="align === 'left' ? 'md:mr-auto' : 'md:ml-auto'"
       >
         <div
+          v-scroll-reveal
           v-for="item in items"
           :key="item.id"
           class="rounded-2xl bg-white/10 backdrop-blur-sm p-5 text-cream"

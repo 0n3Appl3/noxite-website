@@ -77,14 +77,12 @@ async function copyServerIP(ip) {
 
     <div>
       <ShowcaseRow
-        v-scroll-reveal
         :image="showcaseImages[0].image"
         :alt="showcaseImages[0].alt"
         align="left"
         :items="featuresRowOne"
       />
       <ShowcaseRow
-        v-scroll-reveal
         :image="showcaseImages[1].image"
         :alt="showcaseImages[1].alt"
         align="right"
