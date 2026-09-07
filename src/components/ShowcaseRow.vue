@@ -31,8 +31,8 @@ const props = defineProps({
     <div
       class="absolute inset-0 bg-night/65"
       :class="align === 'left'
-        ? 'md:bg-gradient-to-r md:from-night md:via-night/85 md:to-transparent'
-        : 'md:bg-gradient-to-l md:from-night md:via-night/85 md:to-transparent'"
+        ? 'md:bg-gradient-to-r md:from-night md:via-night/75 md:to-transparent'
+        : 'md:bg-gradient-to-l md:from-night md:via-night/75 md:to-transparent'"
     ></div>
 
     <div class="relative mx-auto flex h-full max-w-6xl px-4">

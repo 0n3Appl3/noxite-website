@@ -70,8 +70,7 @@ async function copyServerIP(ip) {
       <h2 class="text-3xl font-semibold">Welcome to Noxite</h2>
       <p class="mt-4 text-night/70">Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
       <p class="mt-3 text-night/70">
-        The server first opened in 2015 under the old name Appl3 PvP as a small factions community. A year later, we became to an SMP in 2016 and has since strived to deliver
-        an experience that is more relaxed and welcoming.
+        We are a Minecraft SMP with the goal of keeping your experience as vanilla as possible. While we are based in NZ, we still welcome players from all over the world to be a part of a small but welcoming community.
       </p>
     </div>
 

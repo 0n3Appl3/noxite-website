@@ -2,7 +2,7 @@
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 import StyledHeading from '../components/StyledHeading.vue'
 
-const tabs = ['Land Claiming', 'Homes', 'Waypoints', 'Teleportation']
+const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation', 'Donator Perks']
 </script>
 
 <template>
@@ -24,6 +24,40 @@ const tabs = ['Land Claiming', 'Homes', 'Waypoints', 'Teleportation']
           </TabList>
 
           <TabPanels class="min-w-0">
+            <!-- General Gameplay -->
+            <TabPanel>
+                <h2 class="text-2xl font-semibold">General</h2>
+                <p class="mt-3 text-night/70">A rundown of the everyday quality-of-life features on Noxite such as sleep voting, private messaging, random teleporting and how AFK detection works.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Sleep Voting</h4>
+                <p class="mt-3 text-night/70">Instead of everyone needing to sleep to skip the night, Noxite uses a vote system. Once someone gets in bed, other online players can vote to fast-forward to morning.</p>
+                <code class="command-block">/sleep</code>
+                <div class="callout callout-note"><strong>Note:</strong> You need at least one player in bed before voting opens. Once enough votes are in (roughly half the players currently in the overworld), it becomes morning for everyone and the storm clears.</div>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Private Messages</h4>
+                <p class="mt-3 text-night/70">Send a message directly to another online player without cluttering public chat.</p>
+                <code class="command-block">/msg [player] [message]</code>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Random Teleport</h4>
+                <p class="mt-3 text-night/70">Don't know where to explore next? Get teleported to a random location in the overworld.</p>
+                <code class="command-block">/wild</code>
+                <div class="callout callout-note"><strong>Note:</strong> Only works in the overworld, and avoids landing you in lava, water, cacti, or magma blocks.</div>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Back to Your Death Location</h4>
+                <p class="mt-3 text-night/70">Died somewhere out in the wild? Teleport straight back to recover your items.</p>
+                <code class="command-block">/back</code>
+                <div class="callout callout-note"><strong>Note:</strong> Only works once per death. Using it again before dying elsewhere won't do anything, since the location clears after you return.</div>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Server Spawn</h4>
+                <p class="mt-3 text-night/70">Teleport back to the server's spawnpoint from anywhere.</p>
+                <code class="command-block">/spawn</code>
+                <div class="callout callout-note"><strong>Note:</strong> Setting and locating the spawnpoint (<code class="command-block inline">/spawn set</code> and <code class="command-block inline">/spawn locate</code>) requires staff permissions, so those aren't covered here.</div>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">AFK Detection</h4>
+                <p class="mt-3 text-night/70">If you go inactive for a while, the server marks you as AFK so other players know not to expect a response. Chatting, running commands, or moving a short distance clears the status immediately.</p>
+                <div class="callout callout-warning"><strong>Warning:</strong> Staying AFK for too long will eventually get you kicked from the server to free up your player slot.</div>
+            </TabPanel>
+
             <!-- Land Claiming -->
             <TabPanel class="prose-none">
                 <h2 class="text-2xl font-semibold">Land Claiming</h2>
@@ -100,7 +134,7 @@ const tabs = ['Land Claiming', 'Homes', 'Waypoints', 'Teleportation']
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Set a Home</h4>
                 <p class="mt-3 text-night/70">Stand where you want your home to be and enter the command below.</p>
                 <code class="command-block">/home set [name]</code>
-                <div class="callout callout-warning"><strong>Warning:</strong> You're limited to <strong>5</strong> homes by default. Donators can set an unlimited number.</div>
+                                <div class="callout callout-warning"><strong>Warning:</strong> You're limited to <strong>5</strong> homes by default. See the Donator Perks tab for how to lift this limit.</div>
                 <p class="text-night/70">Setting a home under a name you've already used updates that home's location instead of creating a new one.</p>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Teleport to a Home</h4>
@@ -148,6 +182,38 @@ const tabs = ['Land Claiming', 'Homes', 'Waypoints', 'Teleportation']
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Help Page</h4>
                 <code class="command-block">/tp help</code>
+            </TabPanel>
+
+            <!-- Donator Perks -->
+            <TabPanel>
+                <h2 class="text-2xl font-semibold">Donator Perks</h2>
+                <p class="mt-3 text-night/70">Donating supports server hosting and unlocks a handful of extra quality-of-life perks. None of these affect gameplay balance and they're purely cosmetic or convenience-based.</p>
+                <p class="mt-3 text-night/70">Interested in donating? Check the <RouterLink to="/" class="underline font-semibold">homepage</RouterLink> for details.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Join When Full</h4>
+                <p class="mt-3 text-night/70">Never get turned away at the door. Donators can join the server even when every player slot is taken.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Unlimited Homes</h4>
+                <p class="mt-3 text-night/70">Regular players are capped at 5 homes. Donators can set as many as they like with <code class="command-block inline">/home set</code>, no extra steps required.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Coloured Nicknames & Prefixes</h4>
+                <p class="mt-3 text-night/70">Donators can use MiniMessage colour and formatting codes when setting a nickname or prefix.</p>
+                <code class="command-block">/nickname set &lt;color:#f0b446&gt;MyName</code>
+                <code class="command-block">/prefix set &lt;color:#5eeb98&gt;VIP</code>
+                <div class="callout callout-note"><strong>Note:</strong> Use <code class="command-block inline">/nickname preview</code> or <code class="command-block inline">/prefix preview</code> first to check how it looks before committing.</div>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Colour on Signs & Items</h4>
+                <p class="mt-3 text-night/70">Donators can use legacy colour codes (<code class="command-block inline">&amp;</code> followed by a colour character, e.g. <code class="command-block inline">&amp;c</code>) when writing on signs and renaming items in an anvil.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Donator Chat Tag</h4>
+                <p class="mt-3 text-night/70">Your name is automatically shown in a donator colour in chat, so you stand out from regular players. No command needed.</p>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Hats & Skulls</h4>
+                <p class="mt-3 text-night/70">Wear almost any item as a hat by holding it and running the following command.</p>
+                <code class="command-block">/hat</code>
+                <div class="callout callout-note"><strong>Note:</strong> You'll need to remove your current helmet slot item first.</div>
+                <p class="text-night/70">Grab a decorative copy of another online player's head to display.</p>
+                <code class="command-block">/skull [player]</code>
             </TabPanel>
           </TabPanels>
         </div>

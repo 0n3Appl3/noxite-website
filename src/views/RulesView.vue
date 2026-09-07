@@ -5,7 +5,7 @@ import { rules } from '../websiteData'
 
 <template>
   <main class="page-full-height pb-16">
-    <StyledHeading title="Server Rules" background="./src/assets/thing_5.png" />
+    <StyledHeading title="House Rules" background="./src/assets/thing_5.png" />
 
     <div class="mx-auto max-w-3xl px-4 py-12">
       <h3 class="text-2xl font-semibold">Keeping it clean</h3>

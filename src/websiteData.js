@@ -129,57 +129,57 @@ export const faqs = [
 export const rules = [
   {
     id: 1,
-    title: 'Be respectful and considerate',
-    description: 'Treat all players with respect and maintain a friendly atmosphere. Avoid offensive language, harassment, or any behaviour that may create a negative experience for others.'
+    title: 'Be kind to each other',
+    description: 'Treat everyone the way you\'d want to be treated. We\'re all here to have fun, so let\'s keep things friendly and drama-free.'
   },
   {
     id: 2,
-    title: 'No griefing',
-    description: 'Do not destroy or modify other players\' creations without their consent. Respect their hard work and effort.'
+    title: 'Hands off other people\'s builds',
+    description: 'Don\'t destroy, edit, or mess with someone else\'s creation without asking first. Their build, their rules.'
   },
   {
     id: 3,
-    title: 'No stealing',
-    description: 'Respect other players\' belongings and do not take items or resources that are not yours unless explicitly allowed by the owner.'
+    title: 'Don\'t take what isn\'t yours',
+    description: 'Leave other players\' stuff alone unless they say it\'s okay to grab it. Simple as that.'
   },
   {
     id: 4,
-    title: 'No cheating',
-    description: 'Do not use hacks, mods, or exploits that give you an unfair advantage over other players. Play the game fairly and maintain a level playing field.'
+    title: 'Play fair',
+    description: 'No hacks, mods, or exploits that give you an unfair edge. Let\'s keep it a level playing field for everyone.'
   },
   {
     id: 5,
-    title: 'No PvP without consent',
-    description: 'Do not engage in combat with other players unless both parties agree. Respect each player\'s choice to engage or avoid PvP.'
+    title: 'Ask before you fight',
+    description: 'PvP is only on if both sides are up for it. Not everyone\'s in the mood to throw hands, and that\'s fine.'
   },
   {
     id: 6,
-    title: 'No offensive or innapropriate builds',
-    description: 'Construct buildings and structures that are suitable for all audiences. Avoid building anything that promotes discrimination or racism or contains explicit content.'
+    title: 'Keep builds all-ages friendly',
+    description: 'Steer clear of anything offensive, discriminatory, or NSFW. Save that stuff for elsewhere.'
   },
   {
     id: 7,
-    title: 'No excessive redstone lag',
-    description: 'Avoid creating redstone contraptions or mechanisms that cause excessive server lag or slow the gameplay for others.'
+    title: 'Go easy on the redstone',
+    description: 'Big contraptions are awesome, but if one\'s tanking the server for everyone else, it\'s time to dial it back.'
   },
   {
     id: 8,
-    title: 'No unauthorised mods to your game client',
-    description: 'Only use approved mods, texture packs, or resource packs that the owner allows. Do not install or use unauthorised software that may compromise the server or other players\' experiences. If you have any doubts, please get in touch with 0n3Appl3.'
+    title: 'Stick to approved mods',
+    description: 'Only use client mods, texture packs, or resource packs the server\'s okay with. Not sure if something\'s fine? Just ask 0n3Appl3.'
   },
   {
     id: 9,
-    title: 'No spamming or advertising',
-    description: 'Avoid excessive messaging, spamming, or advertising unrelated content in the chat. Keep the chat clean and relevant to the gameplay.'
+    title: 'No spam or ads',
+    description: 'Keep the chat readable and on-topic. Nobody wants their screen flooded with copy-paste messages or shop plugs.'
   },
   {
     id: 10,
-    title: 'Follow staff instructions',
-    description: 'Respect and comply with the instructions given by server staff and administrators. They are responsible for maintaining a fair and enjoyable environment for all players.'
+    title: 'Follow the staff\'s lead',
+    description: 'Our team\'s here to keep things running smoothly, so please go along with the call when they step in.'
   },
   {
     id: 11,
-    title: 'Report any issues',
-    description: 'If you encounter bugs, glitches, or rule violations, report them to the server staff or administrators promptly. This will help create a better gaming experience for everyone.'
+    title: 'Spot something? Let us know',
+    description: 'Bugs, glitches, rule-breakers - flag it for the staff. It genuinely helps make Noxite better for everyone.'
   }
 ]
