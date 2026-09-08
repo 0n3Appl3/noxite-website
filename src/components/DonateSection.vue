@@ -22,7 +22,7 @@ const bannerImage = new URL('../assets/thing_3.png', import.meta.url).href
 <template>
   <section class="bg-night text-cream py-16">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="mx-auto max-w-2xl text-center" v-scroll-reveal>
+      <div class="mx-auto max-w-2xl text-left sm:text-center" v-scroll-reveal>
         <h2 class="text-3xl font-semibold">Support Noxite</h2>
         <p class="mt-4 text-cream/70">
           Noxite is free to play and always will be. If you'd like to help cover hosting costs,

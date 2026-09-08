@@ -17,8 +17,8 @@ const openWebsite = (url) => {
 
 <template>
   <div class="border-y-4 border-night/5 bg-coral-light">
-    <div class="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="text-center md:text-left">
+    <div class="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="text-left">
         <h3 class="text-2xl font-semibold text-night">{{ title }}</h3>
         <p class="text-night/70 mt-1">{{ description }}</p>
       </div>

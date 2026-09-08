@@ -13,7 +13,24 @@ const featuresRowTwo = computed(() => features.slice(3, 6))
 
 const showSnackbar = ref(false)
 async function copyServerIP(ip) {
-  await navigator.clipboard.writeText(ip)
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(ip)
+    } else {
+      // Fallback for browsers/webviews without the async Clipboard API
+      const textarea = document.createElement('textarea')
+      textarea.value = ip
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.focus()
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
+  } catch (err) {
+    console.error('Failed to copy server IP:', err)
+  }
   showSnackbar.value = true
   setTimeout(() => (showSnackbar.value = false), 2500)
 }
@@ -50,7 +67,7 @@ async function copyServerIP(ip) {
     >
       <div
         v-if="showSnackbar"
-        class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-2xl bg-night text-cream px-4 py-3 shadow-pop"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 rounded-2xl bg-night text-cream px-4 py-3 shadow-pop"
       >
         <ClipboardDocumentCheckIcon class="h-5 w-5 text-grass" />
         <span class="text-sm font-semibold">IP copied to clipboard</span>
@@ -66,7 +83,7 @@ async function copyServerIP(ip) {
   />
 
   <main>
-    <div class="mx-auto max-w-3xl px-4 py-16 text-center" v-scroll-reveal>
+    <div class="mx-auto max-w-3xl px-4 py-16 text-left sm:text-center" v-scroll-reveal>
       <h2 class="text-3xl font-semibold">Welcome to Noxite</h2>
       <p class="mt-4 text-night/70">Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
       <p class="mt-3 text-night/70">
@@ -92,7 +109,7 @@ async function copyServerIP(ip) {
     <DonateSection />
 
     <div class="mx-auto max-w-3xl px-4 pb-20 pt-20">
-      <h2 class="text-3xl font-semibold text-center" v-scroll-reveal>FAQ</h2>
+      <h2 class="text-3xl font-semibold text-left sm:text-center" v-scroll-reveal>FAQ</h2>
       <div class="mt-8 space-y-3" v-scroll-reveal-group>
         <Disclosure v-for="faq in faqs" :key="faq.id" v-slot="{ open }">
           <div class="rounded-2xl bg-white shadow-pop overflow-hidden">

@@ -37,7 +37,7 @@ const icons = {
   <main class="page-full-height pb-16">
     <StyledHeading title="OneEngine" background="./src/assets/thing_2.png" />
 
-    <div class="mx-auto max-w-3xl px-4 py-12 text-center" v-scroll-reveal>
+    <div class="mx-auto max-w-3xl px-4 py-12 text-left sm:text-center" v-scroll-reveal>
       <h2 class="text-3xl font-semibold">OneEngine to Rule Them All</h2>
       <p class="mt-4 text-night/70">
         OneEngine is the custom, all-in-one core plugin that powers Noxite. Instead of stitching together a dozen separate plugins, everything from land claiming to moderation, homes, chat formatting and more lives in a single, purpose-built package.
@@ -62,7 +62,7 @@ const icons = {
 
     <!-- Remaining features, as a list -->
     <div class="mx-auto max-w-4xl px-4 py-16">
-      <h3 class="text-2xl font-semibold text-center" v-scroll-reveal>More Features</h3>
+      <h3 class="text-2xl font-semibold text-left sm:text-center" v-scroll-reveal>More Features</h3>
       <div class="mt-8 divide-y divide-night/10 rounded-2xl bg-white shadow-pop" v-scroll-reveal-group>
         <div v-for="feature in otherPlugins" :key="feature.id" class="flex gap-4 p-5">
           <div class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-coral-light text-coral">
@@ -76,7 +76,7 @@ const icons = {
       </div>
     </div>
 
-    <div class="mx-auto max-w-3xl px-4 pb-4 text-center" v-scroll-reveal>
+    <div class="mx-auto max-w-3xl px-4 pb-4 text-left sm:text-center" v-scroll-reveal>
       <h2 class="text-3xl font-semibold">Want to run it on your own server?</h2>
       <p class="mt-4 text-night/70">
         OneEngine isn't limited to Noxite. If you're a server owner or administrator interested in giving it a try, the plugin can be tailored to your server's setup and rules.
