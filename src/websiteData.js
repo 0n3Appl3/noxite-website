@@ -46,7 +46,7 @@ export const features = [
 export const showcaseImages = [
   {
     id: 1,
-    image: new URL('./assets/thing_1.png', import.meta.url).href,
+    image: new URL('./assets/thing_4.png', import.meta.url).href,
     alt: 'A view of the Noxite spawn area'
   },
   {
@@ -181,5 +181,85 @@ export const rules = [
     id: 11,
     title: 'Spot something? Let us know',
     description: 'Bugs, glitches, rule-breakers - flag it for the staff. It genuinely helps make Noxite better for everyone.'
+  }
+]
+
+// The headline features get full cards.
+export const featuredPlugins = [
+  {
+    id: 1,
+    icon: 'ShieldCheckIcon',
+    title: 'Land Claiming',
+    description: 'A full chunk-based claiming system with claim groups, three tiers of trust, per-claim toggles (PvP, explosions, mob griefing, and more), and a live sidebar map.'
+  },
+  {
+    id: 2,
+    icon: 'HomeIcon',
+    title: 'Homes & Waypoints',
+    description: 'Players can set multiple homes and track any of them with a boss-bar waypoint that counts down distance as they travel on foot.'
+  },
+  {
+    id: 3,
+    icon: 'UserGroupIcon',
+    title: 'Moderation Tools',
+    description: 'Ban, mute, kick, inventory-see/clear, and social spy, all with staff protections built in so moderators can\u2019t be actioned by mistake.'
+  }
+]
+
+// Everything else, listed more compactly.
+export const otherPlugins = [
+  {
+    id: 4,
+    icon: 'MapPinIcon',
+    title: 'Teleportation Suite',
+    description: 'Teleport requests with accept/deny, random wilderness teleports, and a one-command return to your last death location.'
+  },
+  {
+    id: 5,
+    icon: 'MoonIcon',
+    title: 'Sleep Voting',
+    description: 'A fair vote-to-sleep system so the whole server doesn\u2019t need to pile into bed to skip the night.'
+  },
+  {
+    id: 6,
+    icon: 'ClockIcon',
+    title: 'AFK Detection',
+    description: 'Flags inactive players and can kick them after a configurable timeout, with activity resetting the timer.'
+  },
+  {
+    id: 7,
+    icon: 'ChatBubbleLeftRightIcon',
+    title: 'Chat Formatting & Ranks',
+    description: 'Rank-based chat formats, coloured nicknames and prefixes, private messaging, and a chat-clearing command.'
+  },
+  {
+    id: 8,
+    icon: 'MegaphoneIcon',
+    title: 'Announcements',
+    description: 'Scheduled, rotating server announcements with full MiniMessage formatting and an adjustable frequency.'
+  },
+  {
+    id: 9,
+    icon: 'PaintBrushIcon',
+    title: 'Colour & Cosmetics',
+    description: 'Permission-gated colour codes for signs and items, plus wearable hats and decorative player-head skulls.'
+  },
+  {
+    id: 10,
+    icon: 'NoSymbolIcon',
+    title: 'Spawn Protection',
+    description: 'A configurable no-claim radius around spawn, with a settable and locatable spawnpoint.'
+  },
+  {
+    id: 11,
+    icon: 'ArrowsRightLeftIcon',
+    title: 'Live Config Reloading',
+    description: 'Every config-backed system can be reloaded on the fly with a single command, no restart required.'
+  },
+  {
+    id: 12,
+    icon: 'AdjustmentsHorizontalIcon',
+    title: 'Built to Be Configured',
+    description: 'Claim costs, accrual rates, AFK timers, announcement frequency, chat formats and more are all adjustable.'
   }
 ]

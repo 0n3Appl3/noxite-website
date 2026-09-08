@@ -16,7 +16,7 @@ const donateLink = 'https://noxite.co.nz/donate'
 
 // TODO: swap in a real banner screenshot (e.g. a donator-only build, or the
 // hats/skulls perk in action) at src/assets/donate-banner.png
-const bannerImage = new URL('../assets/thing_1.png', import.meta.url).href
+const bannerImage = new URL('../assets/thing_3.png', import.meta.url).href
 </script>
 
 <template>

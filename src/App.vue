@@ -10,7 +10,8 @@ const year = new Date().getFullYear()
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/rules', label: 'Rules' },
-  { to: '/guides', label: 'Guides' }
+  { to: '/guides', label: 'Guides' },
+  { to: '/oneengine', label: 'OneEngine' }
 ]
 </script>
 
