@@ -137,7 +137,7 @@ async function copyServerIP(ip) {
 
   <CallToAction
     title="Learn about our custom plugin"
-    description="All of Noxite's core functionality is powered by One Engine, our custom all-in-one SMP plugin."
+    description="All of Noxite's core functionality is powered by OneEngine, our custom all-in-one SMP plugin."
     link="/guides"
     buttonText="Read Guides"
   />

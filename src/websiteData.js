@@ -103,7 +103,7 @@ export const faqs = [
     {
     id: 2,
     question: 'What kind of plugins is this server using?',
-    answer: 'Noxite\'s core functionality like homes, teleportation and land claiming utilise a custom-made plugin called One Engine. If you are a server owner or administrator and want to learn more, contact 0n3Appl3 for details.'
+    answer: 'Noxite\'s core functionality like homes, teleportation and land claiming utilise a custom-made plugin called OneEngine. If you are a server owner or administrator and want to learn more, read the OneEngine page for details.'
   },
   {
     id: 3,
@@ -140,7 +140,7 @@ export const rules = [
   {
     id: 3,
     title: 'Don\'t take what isn\'t yours',
-    description: 'Leave other players\' stuff alone unless they say it\'s okay to grab it. Simple as that.'
+    description: 'Leave other players\' stuff alone unless they say it\'s okay to grab it.'
   },
   {
     id: 4,
@@ -155,7 +155,7 @@ export const rules = [
   {
     id: 6,
     title: 'Keep builds all-ages friendly',
-    description: 'Steer clear of anything offensive, discriminatory, or NSFW. Save that stuff for elsewhere.'
+    description: 'Steer clear of anything offensive, discriminatory, or NSFW.'
   },
   {
     id: 7,
@@ -165,7 +165,7 @@ export const rules = [
   {
     id: 8,
     title: 'Stick to approved mods',
-    description: 'Only use client mods, texture packs, or resource packs the server\'s okay with. Not sure if something\'s fine? Just ask 0n3Appl3.'
+    description: 'Only use client mods, texture packs, or resource packs the server\'s okay with. Not sure if something\'s fine? Ask the moderation team.'
   },
   {
     id: 9,
@@ -174,13 +174,13 @@ export const rules = [
   },
   {
     id: 10,
-    title: 'Follow the staff\'s lead',
+    title: 'Follow the moderation team\'s lead',
     description: 'Our team\'s here to keep things running smoothly, so please go along with the call when they step in.'
   },
   {
     id: 11,
     title: 'Spot something? Let us know',
-    description: 'Bugs, glitches, rule-breakers - flag it for the staff. It genuinely helps make Noxite better for everyone.'
+    description: 'Bugs, glitches, rule-breakers. Please flag it for the staff. It genuinely helps make the server better for everyone.'
   }
 ]
 
