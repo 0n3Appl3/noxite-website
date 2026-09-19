@@ -11,7 +11,7 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/rules', label: 'Rules' },
   { to: '/guides', label: 'Guides' },
-  { to: '/oneengine', label: 'OneEngine' }
+  // { to: '/oneengine', label: 'OneEngine' }
 ]
 </script>
 

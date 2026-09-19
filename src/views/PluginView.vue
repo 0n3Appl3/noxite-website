@@ -38,12 +38,12 @@ const icons = {
     <StyledHeading title="OneEngine" background="./src/assets/thing_2.png" />
 
     <div class="mx-auto max-w-3xl px-4 py-12 text-left sm:text-center" v-scroll-reveal>
-      <h2 class="text-3xl font-semibold">OneEngine to Rule Them All</h2>
+      <h2 class="text-3xl font-semibold">One Engine to Rule Them All</h2>
       <p class="mt-4 text-night/70">
         OneEngine is the custom, all-in-one core plugin that powers Noxite. Instead of stitching together a dozen separate plugins, everything from land claiming to moderation, homes, chat formatting and more lives in a single, purpose-built package.
       </p>
       <p class="mt-3 text-night/70">
-        It was built for a near-vanilla survival SMP experience, and it's designed to be configured, not just installed. Costs, timers, formats, and permissions can all be tuned to suit a different server's needs.
+        It is built for a near-vanilla survival SMP experience, and it is designed to be configured, not just installed. Costs, timers, formats, and permissions can all be tuned to suit a different server's needs.
       </p>
     </div>
 
@@ -79,10 +79,10 @@ const icons = {
     <div class="mx-auto max-w-3xl px-4 pb-4 text-left sm:text-center" v-scroll-reveal>
       <h2 class="text-3xl font-semibold">Want to run it on your own server?</h2>
       <p class="mt-4 text-night/70">
-        OneEngine isn't limited to Noxite. If you're a server owner or administrator interested in giving it a try, the plugin can be tailored to your server's setup and rules.
+        OneEngine is not limited to Noxite. If you are a server owner or administrator interested in giving it a try, the plugin can be tailored to your server's setup and rules.
       </p>
       <p class="mt-3 text-night/70">
-        Getting your own copy of OneEngine, along with any customisation work, is a paid service. Pricing depends on what you're after and is discussed directly.
+        Getting your own copy of OneEngine, along with any customisation work, is a paid service. Pricing depends on what you are after and is discussed directly.
       </p>
     </div>
   </main>

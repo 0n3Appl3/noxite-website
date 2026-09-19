@@ -39,19 +39,19 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <code class="command-block">/msg [player] [message]</code>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Random Teleport</h4>
-                <p class="mt-3 text-night/70">Don't know where to explore next? Get teleported to a random location in the overworld.</p>
+                <p class="mt-3 text-night/70">Not sure where to explore next? Get teleported to a random location in the overworld.</p>
                 <code class="command-block">/wild</code>
                 <div class="callout callout-note"><strong>Note:</strong> Only works in the overworld, and avoids landing you in lava, water, cacti, or magma blocks.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Back to Your Death Location</h4>
                 <p class="mt-3 text-night/70">Died somewhere out in the wild? Teleport straight back to recover your items.</p>
                 <code class="command-block">/back</code>
-                <div class="callout callout-note"><strong>Note:</strong> Only works once per death. Using it again before dying elsewhere won't do anything, since the location clears after you return.</div>
+                <div class="callout callout-note"><strong>Note:</strong> Only works once per death. Using it again before dying elsewhere would not do anything, since the location clears after you return.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Server Spawn</h4>
                 <p class="mt-3 text-night/70">Teleport back to the server's spawnpoint from anywhere.</p>
                 <code class="command-block">/spawn</code>
-                <div class="callout callout-note"><strong>Note:</strong> Setting and locating the spawnpoint (<code class="command-block inline">/spawn set</code> and <code class="command-block inline">/spawn locate</code>) requires staff permissions, so those aren't covered here.</div>
+                <div class="callout callout-note"><strong>Note:</strong> Setting and locating the spawnpoint (<code class="command-block inline">/spawn set</code> and <code class="command-block inline">/spawn locate</code>) requires staff permissions, so those are not covered here.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">AFK Detection</h4>
                 <p class="mt-3 text-night/70">If you go inactive for a while, the server marks you as AFK so other players know not to expect a response. Chatting, running commands, or moving a short distance clears the status immediately.</p>
@@ -66,7 +66,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Claim a Chunk</h4>
                 <p class="mt-3 text-night/70">Stand in the chunk you want to protect and enter the following command.</p>
                 <code class="command-block">/claim [claim name]</code>
-                <div class="callout callout-note"><strong>Note:</strong> If the name matches an existing claim group of yours, the chunk is added to it, but only if it's adjacent to a chunk you already own in that group. If the name is new, a fresh claim group is created.</div>
+                <div class="callout callout-note"><strong>Note:</strong> If the name matches an existing claim group of yours, the chunk is added to it, but only if it is adjacent to a chunk you already own in that group. If the name is new, a fresh claim group is created.</div>
                 <p class="text-night/70">Claiming costs claim blocks, which you earn automatically just by being online. Check your balance any time with <code class="command-block inline">/claim balance</code>.</p>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">View and Manage Your Claims</h4>
@@ -90,7 +90,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 </div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Claim Options</h4>
-                <p class="mt-3 text-night/70">Each claim group has toggleable settings, editable by Managers from the options menu (found via <code class="command-block inline">/claim list</code>, or directly for the claim you're standing on).</p>
+                <p class="mt-3 text-night/70">Each claim group has toggleable settings, editable by Managers from the options menu (found via <code class="command-block inline">/claim list</code>, or directly for the claim you are standing on).</p>
                 <code class="command-block">/claim options</code>
                 <div class="overflow-x-auto rounded-2xl shadow-pop mt-4">
                   <table class="w-full text-sm">
@@ -116,10 +116,10 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                     </thead>
                     <tbody class="bg-white divide-y divide-night/5">
                       <tr><td class="px-4 py-3 font-mono text-xs">/claim map</td><td class="px-4 py-3 text-night/70">Toggles a sidebar map showing claim ownership in the chunks around you, updating as you move.</td></tr>
-                      <tr><td class="px-4 py-3 font-mono text-xs">/claim rename [name]</td><td class="px-4 py-3 text-night/70">Renames the claim group you're currently standing in (must be the owner).</td></tr>
+                      <tr><td class="px-4 py-3 font-mono text-xs">/claim rename [name]</td><td class="px-4 py-3 text-night/70">Renames the claim group you are currently standing in (must be the owner).</td></tr>
                       <tr><td class="px-4 py-3 font-mono text-xs">/claim abandon [name]</td><td class="px-4 py-3 text-night/70">Releases every chunk in a claim group and refunds a percentage of the claim blocks spent, after a confirmation prompt.</td></tr>
-                      <tr><td class="px-4 py-3 font-mono text-xs">/claim info</td><td class="px-4 py-3 text-night/70">Shows details about the chunk you're standing in, including its owner and trusted player count.</td></tr>
-                      <tr><td class="px-4 py-3 font-mono text-xs">/claim balance</td><td class="px-4 py-3 text-night/70">Shows your current claim block balance and how many chunks it's worth.</td></tr>
+                      <tr><td class="px-4 py-3 font-mono text-xs">/claim info</td><td class="px-4 py-3 text-night/70">Shows details about the chunk you are standing in, including its owner and trusted player count.</td></tr>
+                      <tr><td class="px-4 py-3 font-mono text-xs">/claim balance</td><td class="px-4 py-3 text-night/70">Shows your current claim block balance and how many chunks it is worth.</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -134,7 +134,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Set a Home</h4>
                 <p class="mt-3 text-night/70">Stand where you want your home to be and enter the command below.</p>
                 <code class="command-block">/home set [name]</code>
-                                <div class="callout callout-warning"><strong>Warning:</strong> You're limited to <strong>5</strong> homes by default. See the Donator Perks tab for how to lift this limit.</div>
+                                <div class="callout callout-warning"><strong>Warning:</strong> You are limited to <strong>5</strong> homes by default. See the Donator Perks tab for how to lift this limit.</div>
                 <p class="text-night/70">Setting a home under a name you've already used updates that home's location instead of creating a new one.</p>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Teleport to a Home</h4>
@@ -156,8 +156,8 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Track a Home</h4>
                 <p class="mt-3 text-night/70">Waypoints are tied to your existing homes. Set one first with <code class="command-block inline">/home set</code>, then track it with the following command.</p>
                 <code class="command-block">/home waypoint [name]</code>
-                <p class="text-night/70">A boss bar appears at the top of your screen showing the distance remaining. It fills up as you get closer and disappears once you're within range of your destination, with a sound to let you know you've arrived.</p>
-                <div class="callout callout-note"><strong>Note:</strong> Tracking a new home automatically replaces whichever waypoint you were tracking before. You can only track one at a time. The home must also be in the same world you're currently in.</div>
+                <p class="text-night/70">A boss bar appears at the top of your screen showing the distance remaining. It fills up as you get closer and disappears once you are within range of your destination, with a sound to let you know you've arrived.</p>
+                <div class="callout callout-note"><strong>Note:</strong> Tracking a new home automatically replaces whichever waypoint you were tracking before. You can only track one at a time. The home must also be in the same world you are currently in.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Stop Tracking</h4>
                 <p class="mt-3 text-night/70">Run the same command with no name to stop tracking your current waypoint.</p>
@@ -171,7 +171,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Send a Teleport Request</h4>
                 <code class="command-block">/tp [player]</code>
-                <div class="callout callout-note"><strong>Note:</strong> Requests don't expire, so the recipient can accept or deny whenever they're ready.</div>
+                <div class="callout callout-note"><strong>Note:</strong> Requests do not expire, so the recipient can accept or deny whenever they are ready.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Accept or Deny a Request</h4>
                 <p class="mt-3 text-night/70">Use whichever command feels quicker to type. Both pairs do the same thing.</p>
@@ -187,7 +187,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
             <!-- Donator Perks -->
             <TabPanel>
                 <h2 class="text-2xl font-semibold">Donator Perks</h2>
-                <p class="mt-3 text-night/70">Donating supports server hosting and unlocks a handful of extra quality-of-life perks. None of these affect gameplay balance and they're purely cosmetic or convenience-based.</p>
+                <p class="mt-3 text-night/70">Donating supports server hosting and unlocks a handful of extra quality-of-life perks. None of these affect gameplay balance and they are purely cosmetic or convenience-based.</p>
                 <p class="mt-3 text-night/70">Interested in donating? Check the <RouterLink to="/" class="underline font-semibold">homepage</RouterLink> for details.</p>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Join When Full</h4>

@@ -34,7 +34,7 @@ export const features = [
     id: 6,
     icon: 'ChatBubbleLeftRightIcon',
     title: 'Discord Integration',
-    description: "Chat with the server from your phone. Messages sync both ways between Discord and in-game chat, so you're never out of the loop."
+    description: "Chat with the server from your phone. Messages sync both ways between Discord and in-game chat, so you are never out of the loop."
   }
 ]
 
@@ -67,7 +67,7 @@ export const donatorPerks = [
     id: 2,
     icon: 'HomeModernIcon',
     title: 'Unlimited Homes',
-    description: 'Skip the 5-home limit entirely and set as many /home points as you need.'
+    description: 'Skip the 5-home limit entirely and set as many home points as you need.'
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const donatorPerks = [
     id: 5,
     icon: 'GiftIcon',
     title: 'Hats & Skulls',
-    description: 'Wear almost any item as a hat with /hat, or grab a decorative player head to display with /skull.'
+    description: 'Wear almost any item as a hat or grab a decorative player head to display.'
   },
   {
     id: 6,
@@ -130,27 +130,27 @@ export const rules = [
   {
     id: 1,
     title: 'Be kind to each other',
-    description: 'Treat everyone the way you\'d want to be treated. We\'re all here to have fun, so let\'s keep things friendly and drama-free.'
+    description: 'Treat everyone the way you would want to be treated. We are all here to have fun, so keep things friendly and drama-free.'
   },
   {
     id: 2,
     title: 'Hands off other people\'s builds',
-    description: 'Don\'t destroy, edit, or mess with someone else\'s creation without asking first. Their build, their rules.'
+    description: 'Do not destroy, edit, or mess with someone else\'s creation without asking first. Their build, their rules.'
   },
   {
     id: 3,
-    title: 'Don\'t take what isn\'t yours',
-    description: 'Leave other players\' stuff alone unless they say it\'s okay to grab it.'
+    title: 'Do not take what is not yours',
+    description: 'Leave other players\' stuff alone unless they say it is okay to grab it.'
   },
   {
     id: 4,
     title: 'Play fair',
-    description: 'No hacks, mods, or exploits that give you an unfair edge. Let\'s keep it a level playing field for everyone.'
+    description: 'No hacks, mods, or exploits that give you an unfair edge. Keep it a level playing field for everyone.'
   },
   {
     id: 5,
     title: 'Ask before you fight',
-    description: 'PvP is only on if both sides are up for it. Not everyone\'s in the mood to throw hands, and that\'s fine.'
+    description: 'PvP is only on if both sides are up for it. Not everyone is in the mood to throw hands, and that is fine.'
   },
   {
     id: 6,
@@ -160,12 +160,12 @@ export const rules = [
   {
     id: 7,
     title: 'Go easy on the redstone',
-    description: 'Big contraptions are awesome, but if one\'s tanking the server for everyone else, it\'s time to dial it back.'
+    description: 'Big contraptions are awesome, but if one is tanking the server for everyone else, it is time to dial it back.'
   },
   {
     id: 8,
     title: 'Stick to approved mods',
-    description: 'Only use client mods, texture packs, or resource packs the server\'s okay with. Not sure if something\'s fine? Ask the moderation team.'
+    description: 'Only use client mods, texture packs, or resource packs the server is okay with. Not sure if something is fine? Ask the moderation team.'
   },
   {
     id: 9,
@@ -175,7 +175,7 @@ export const rules = [
   {
     id: 10,
     title: 'Follow the moderation team\'s lead',
-    description: 'Our team\'s here to keep things running smoothly, so please go along with the call when they step in.'
+    description: 'Our team is here to keep things running smoothly, so please go along with the call when they step in.'
   },
   {
     id: 11,
@@ -202,7 +202,7 @@ export const featuredPlugins = [
     id: 3,
     icon: 'UserGroupIcon',
     title: 'Moderation Tools',
-    description: 'Ban, mute, kick, inventory-see/clear, and social spy, all with staff protections built in so moderators can\u2019t be actioned by mistake.'
+    description: 'Ban, mute, kick, inventory-see/clear, and social spy, all with staff protections built in so moderators cannot be actioned by mistake.'
   }
 ]
 
@@ -218,7 +218,7 @@ export const otherPlugins = [
     id: 5,
     icon: 'MoonIcon',
     title: 'Sleep Voting',
-    description: 'A fair vote-to-sleep system so the whole server doesn\u2019t need to pile into bed to skip the night.'
+    description: 'A fair vote-to-sleep system so the whole server does not need to pile into bed to skip the night.'
   },
   {
     id: 6,
