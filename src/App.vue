@@ -2,10 +2,13 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { CurrencyDollarIcon } from '@heroicons/vue/24/solid'
 import scrollToTop from './scrollToTop'
 import ScrollToTop from './components/ScrollToTop.vue'
 
 const year = new Date().getFullYear()
+
+const donateLink = 'https://buymeacoffee.com/noxitenz'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -35,6 +38,11 @@ const navLinks = [
             {{ link.label }}
           </RouterLink>
 
+          <a :href="donateLink" target="_blank" rel="noopener"
+             class="grid h-10 w-10 place-items-center rounded-full bg-night/5 text-night hover:bg-coral hover:text-white transition-colors" aria-label="Donate">
+            <CurrencyDollarIcon class="h-5 w-5" />
+          </a>
+
           <a href="https://discord.gg/xnyMD2r" target="_blank" rel="noopener"
              class="grid h-10 w-10 place-items-center rounded-full bg-night/5 text-night hover:bg-coral hover:text-white transition-colors" aria-label="Discord">
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M20.3 5.4a17 17 0 0 0-4.2-1.3l-.2.4c1.6.4 2.5.9 3.4 1.6-1.5-.7-3-1.2-4.9-1.2s-3.4.5-4.9 1.2c.9-.7 1.9-1.3 3.5-1.6l-.2-.4A17 17 0 0 0 3.7 5.4C1.8 8.9 1.3 12.3 1.5 15.6a17 17 0 0 0 5.1 2.6c.4-.6.8-1.2 1-1.9-.6-.2-1.1-.5-1.6-.8l.4-.3c3 1.4 6.3 1.4 9.3 0l.4.3c-.5.3-1 .6-1.6.8.3.7.6 1.3 1 1.9a17 17 0 0 0 5.1-2.6c.3-3.8-.5-7.2-2.3-10.2ZM8.7 13.6c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.7.8 1.6 1.8c0 1-.7 1.8-1.6 1.8Zm6.6 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.7.8 1.6 1.8c0 1-.7 1.8-1.6 1.8Z"/></svg>
@@ -61,6 +69,7 @@ const navLinks = [
           {{ link.label }}
         </RouterLink>
         <div class="flex gap-2 pt-2">
+          <a :href="donateLink" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Donate</a>
           <a href="https://discord.gg/xnyMD2r" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Discord</a>
         </div>
       </div>

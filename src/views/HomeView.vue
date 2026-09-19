@@ -96,12 +96,18 @@ async function copyServerIP(ip) {
         :image="showcaseImages[0].image"
         :alt="showcaseImages[0].alt"
         align="left"
+        heading="Built for Survival"
+        subtitle="Protect your builds, set homes, and get around the server without the hassle."
+        heading-align="left"
         :items="featuresRowOne"
       />
       <ShowcaseRow
         :image="showcaseImages[1].image"
         :alt="showcaseImages[1].alt"
         align="right"
+        heading="Play Your Way"
+        subtitle="A near-vanilla ruleset with just enough quality-of-life to keep things fair and fun."
+        heading-align="right"
         :items="featuresRowTwo"
       />
     </div>

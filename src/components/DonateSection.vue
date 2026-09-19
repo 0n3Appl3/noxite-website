@@ -11,8 +11,7 @@ import { donatorPerks } from '../websiteData'
 
 const icons = { UserPlusIcon, HomeModernIcon, PaintBrushIcon, StarIcon, GiftIcon, SparklesIcon }
 
-// TODO: replace with your real store/Patreon/Ko-fi link.
-const donateLink = 'https://noxite.co.nz/donate'
+const donateLink = 'https://buymeacoffee.com/noxitenz'
 
 // TODO: swap in a real banner screenshot (e.g. a donator-only build, or the
 // hats/skulls perk in action) at src/assets/donate-banner.png

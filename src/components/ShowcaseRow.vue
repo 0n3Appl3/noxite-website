@@ -15,12 +15,24 @@ const props = defineProps({
   image: { type: String, required: true },
   alt: { type: String, default: '' },
   align: { type: String, default: 'left', validator: (v) => ['left', 'right'].includes(v) },
-  items: { type: Array, required: true }
+  items: { type: Array, required: true },
+  // Optional heading shown above the three columns.
+  heading: { type: String, default: '' },
+  // Optional subtitle shown under the heading.
+  subtitle: { type: String, default: '' },
+  // Alignment of the heading/subtitle block.
+  headingAlign: { type: String, default: 'center', validator: (v) => ['left', 'center', 'right'].includes(v) }
 })
+
+const headingAlignClass = {
+  left: 'text-left items-start',
+  center: 'text-center items-center',
+  right: 'text-right items-end'
+}
 </script>
 
 <template>
-  <div class="relative overflow-hidden py-16 w-full min-h-[600px] md:min-h-[520px]">
+  <div class="relative overflow-hidden py-16 w-full min-h-[600px] md:min-h-[420px]">
     <img
       :src="image"
       :alt="alt"
@@ -28,20 +40,29 @@ const props = defineProps({
       loading="lazy"
     />
 
-    <div
-      class="absolute inset-0 bg-night/65"
-      :class="align === 'left'
-        ? 'md:bg-gradient-to-r md:from-night md:via-night/75 md:to-transparent'
-        : 'md:bg-gradient-to-l md:from-night md:via-night/75 md:to-transparent'"
-    ></div>
+    <div class="absolute inset-0 bg-night/20"></div>
+    <div class="absolute inset-0 bg-coral/100 mix-blend-multiply"></div>
 
-    <div class="relative mx-auto flex h-full max-w-6xl px-4">
+    <div class="relative mx-auto flex h-full max-w-6xl flex-col justify-center px-4">
       <div
-        class="flex w-full flex-col justify-center gap-4 py-10 md:w-1/2 md:py-0 lg:w-2/5"
-        :class="align === 'left' ? 'md:mr-auto' : 'md:ml-auto'"
+        v-if="heading || subtitle"
+        v-scroll-reveal
+        class="mb-8 flex flex-col"
+        :class="headingAlignClass[headingAlign]"
+      >
+        <h2 v-if="heading" class="text-2xl font-display font-semibold text-cream md:text-3xl">
+          {{ heading }}
+        </h2>
+        <p v-if="subtitle" class="mt-2 max-w-2xl text-sm text-cream/80 md:text-base">
+          {{ subtitle }}
+        </p>
+      </div>
+
+      <div
+        v-scroll-reveal-group
+        class="grid grid-cols-1 gap-4 py-10 md:grid-cols-3 md:py-0"
       >
         <div
-          v-scroll-reveal
           v-for="item in items"
           :key="item.id"
           class="rounded-2xl bg-white/10 backdrop-blur-sm p-5 text-cream"
