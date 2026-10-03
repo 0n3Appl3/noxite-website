@@ -21,12 +21,7 @@ const router = createRouter({
       path: '/guides',
       name: 'guides',
       component: () => import('../views/GuidesView.vue')
-    },
-    {
-      path: '/oneengine',
-      name: 'oneengine',
-      component: () => import('../views/PluginView.vue')
-    },
+    }
   ]
 })
 

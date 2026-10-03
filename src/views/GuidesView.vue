@@ -51,7 +51,6 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Server Spawn</h4>
                 <p class="mt-3 text-night/70">Teleport back to the server's spawnpoint from anywhere.</p>
                 <code class="command-block">/spawn</code>
-                <div class="callout callout-note"><strong>Note:</strong> Setting and locating the spawnpoint (<code class="command-block inline">/spawn set</code> and <code class="command-block inline">/spawn locate</code>) requires staff permissions, so those are not covered here.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">AFK Detection</h4>
                 <p class="mt-3 text-night/70">If you go inactive for a while, the server marks you as AFK so other players know not to expect a response. Chatting, running commands, or moving a short distance clears the status immediately.</p>

@@ -1,40 +1,51 @@
-// Save as src/websiteData.js
 export const features = [
   {
     id: 1,
     icon: 'ShieldCheckIcon',
     title: 'Land Claiming',
-    description: 'Protect your builds with a simple chunk-claiming system. Add friends to your claim, control who can open your chests, and keep griefers out for good.'
+    description: 'Protect your builds with a simple chunk-claiming system. Add friends to your claim, control who can open your chests, and keep griefers out for good.',
+    image: new URL('./assets/claiming.png', import.meta.url).href,
+    imageAlt: 'Claiming'
   },
   {
     id: 2,
     icon: 'HomeIcon',
     title: 'Homes',
-    description: 'Set up to five home points and teleport back instantly. No cooldowns, no waiting, and no donations required to skip the queue.'
+    description: 'Set up to five home points and teleport back instantly. No cooldowns, no waiting, and no donations required to skip the queue.',
+    image: new URL('./assets/homes.png', import.meta.url).href,
+    imageAlt: 'Homes'
   },
   {
     id: 3,
     icon: 'MapPinIcon',
     title: 'Waypoints',
-    description: 'Track any of your homes without teleporting to it. A boss bar shows how far away you are until you arrive on foot.'
+    description: 'Track any of your homes without teleporting to it. A boss bar shows how far away you are until you arrive on foot.',
+    image: new URL('./assets/waypoints.png', import.meta.url).href,
+    imageAlt: 'Waypoints'
   },
   {
     id: 4,
     icon: 'MoonIcon',
     title: 'Sleep Voting',
-    description: "Skip the night without waking the whole server. Once enough players vote to sleep, morning comes for everyone."
+    description: "Skip the night without waking the whole server. Once enough players vote to sleep, morning comes for everyone.",
+    image: new URL('./assets/sleeping.png', import.meta.url).href,
+    imageAlt: 'Sleeping'
   },
   {
     id: 5,
     icon: 'CubeIcon',
-    title: 'Near-Vanilla Experience',
-    description: 'No pay-to-win, no gimmicks. Noxite runs a light plugin set focused on quality of life, so the game still feels like Minecraft.'
+    title: 'Near-Vanilla',
+    description: 'No pay-to-win, no gimmicks. Noxite runs a light plugin set focused on quality of life, so the game still feels like Minecraft.',
+    image: new URL('./assets/vanilla.png', import.meta.url).href,
+    imageAlt: 'Vanilla'
   },
   {
     id: 6,
     icon: 'ChatBubbleLeftRightIcon',
     title: 'Discord Integration',
-    description: "Chat with the server from your phone. Messages sync both ways between Discord and in-game chat, so you are never out of the loop."
+    description: "Chat with the server from your phone. Messages sync both ways between Discord and in-game chat, so you are never out of the loop.",
+    image: new URL('./assets/discord.png', import.meta.url).href,
+    imageAlt: 'Discord'
   }
 ]
 
@@ -98,12 +109,12 @@ export const faqs = [
   {
     id: 1,
     question: 'Why is it called Noxite?',
-    answer: 'Simply, it is a cool name. Servers with "Craft", "SMP" and "PvP" in the name is getting old. The server\'s previous name, Appl3 PvP, came from an era when factions were a trendy gameplay style. Yes, you may know the name from the Noxcrew, but this server is not associated with them.'
+    answer: 'Simply, it is a cool name. Servers with "Craft", "SMP" and "PvP" in the name are getting old. The server\'s previous name, Appl3 PvP, came from an era when factions were a trendy gameplay style. Yes, you may know the name from the Noxcrew, but this server is not associated with them.'
   },
     {
     id: 2,
     question: 'What kind of plugins is this server using?',
-    answer: 'Noxite\'s core functionality like homes, teleportation and land claiming utilise a custom-made plugin called OneEngine. If you are a server owner or administrator and want to learn more, read the OneEngine page for details.'
+    answer: 'Noxite\'s core functionality like homes, teleportation and land claiming utilise a custom-made plugin called OneEngine.'
   },
   {
     id: 3,

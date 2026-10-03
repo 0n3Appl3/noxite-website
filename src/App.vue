@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { CurrencyDollarIcon } from '@heroicons/vue/24/solid'
+import { HeartIcon } from '@heroicons/vue/24/solid'
 import scrollToTop from './scrollToTop'
 import ScrollToTop from './components/ScrollToTop.vue'
 
@@ -14,7 +14,6 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/rules', label: 'Rules' },
   { to: '/guides', label: 'Guides' },
-  // { to: '/oneengine', label: 'OneEngine' }
 ]
 </script>
 
@@ -40,7 +39,7 @@ const navLinks = [
 
           <a :href="donateLink" target="_blank" rel="noopener"
              class="grid h-10 w-10 place-items-center rounded-full bg-night/5 text-night hover:bg-coral hover:text-white transition-colors" aria-label="Donate">
-            <CurrencyDollarIcon class="h-5 w-5" />
+            <HeartIcon class="h-5 w-5" />
           </a>
 
           <a href="https://discord.gg/xnyMD2r" target="_blank" rel="noopener"
@@ -85,10 +84,17 @@ const navLinks = [
   <footer class="bg-night text-cream rounded-t-[2.5rem] mt-10">
     <div class="mx-auto max-w-6xl px-4 py-10">
       <div class="flex flex-wrap items-center justify-between gap-6">
-        <RouterLink to="/" @click="scrollToTop" class="flex items-center gap-3">
-          <img src="../src/assets/noxite-icon.png" alt="Noxite logo" class="h-10 w-10 rounded-xl" />
-          <span class="font-display font-semibold">&copy; {{ year }} Noxite, by 0n3Appl3</span>
-        </RouterLink>
+        <div class="flex items-center gap-3">
+          <RouterLink to="/" @click="scrollToTop" class="shrink-0">
+            <img src="../src/assets/noxite-icon.png" alt="Noxite logo" class="h-10 w-10 rounded-xl" />
+          </RouterLink>
+          <div class="flex flex-col">
+            <span class="font-display font-semibold">&copy; {{ year }} Noxite, by 0n3Appl3</span>
+            <p class="max-w-md text-xs text-cream/50">
+              Not affiliated with Mojang or Microsoft.
+            </p>
+          </div>
+        </div>
         <ul class="flex gap-2">
           <li v-for="link in navLinks" :key="link.to">
             <RouterLink :to="link.to" @click="scrollToTop" class="pill-link text-cream/80 hover:bg-white/10 hover:text-white">

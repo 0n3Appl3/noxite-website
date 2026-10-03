@@ -1,15 +1,11 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon, ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline'
 import { features, faqs, showcaseImages } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
 import DonateSection from '../components/DonateSection.vue'
 import ShowcaseRow from '../components/ShowcaseRow.vue'
-
-// Split the 6 features into two groups of 3, one per showcase row.
-const featuresRowOne = computed(() => features.slice(0, 3))
-const featuresRowTwo = computed(() => features.slice(3, 6))
 
 const showSnackbar = ref(false)
 async function copyServerIP(ip) {
@@ -44,8 +40,8 @@ async function copyServerIP(ip) {
     <div class="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-transparent"></div>
     <div class="relative mx-auto flex h-full max-w-6xl items-center px-4">
       <div class="text-white">
-        <h1 class="text-5xl md:text-6xl font-display font-semibold">Survive together</h1>
-        <p class="mt-2 text-lg md:text-xl text-cream/90">Minecraft multiplayer hosted in New Zealand</p>
+        <h1 class="text-5xl md:text-6xl font-display font-semibold">Build together. Maybe.</h1>
+        <p class="mt-2 text-lg md:text-xl text-cream/90">Just another survival multiplayer server asking you to join them</p>
         <button
           type="button"
           @click="copyServerIP('play.noxite.co.nz')"
@@ -76,7 +72,7 @@ async function copyServerIP(ip) {
   </header>
 
   <CallToAction
-    title="Join our community on Discord"
+    title="Join us on Discord"
     description="Send server chat messages to fellow players from the comfort of your mobile device!"
     website="https://discord.gg/xnyMD2r"
     buttonText="Join Discord"
@@ -84,31 +80,21 @@ async function copyServerIP(ip) {
 
   <main>
     <div class="mx-auto max-w-3xl px-4 py-16 text-left sm:text-center" v-scroll-reveal>
-      <h2 class="text-3xl font-semibold">Welcome to Noxite</h2>
-      <p class="mt-4 text-night/70">Noxite is a Minecraft survival multiplayer server hosted in New Zealand.</p>
+      <h2 class="text-3xl font-semibold pb-4">Greetings</h2>
+      <hr class="py-2">
       <p class="mt-3 text-night/70">
-        We are a Minecraft SMP with the goal of keeping your experience as vanilla as possible. While we are based in NZ, we still welcome players from all over the world to be a part of a small but welcoming community.
+        We are a Minecraft survival multiplayer server based in New Zealand. Play a mostly vanilla Minecraft experience, with just a few quality-of-life tweaks to keep things interesting. The server welcomes players from all over the world to join us. We would love to have you!
       </p>
     </div>
 
     <div>
       <ShowcaseRow
-        :image="showcaseImages[0].image"
-        :alt="showcaseImages[0].alt"
-        align="left"
-        heading="Built for Survival"
-        subtitle="Protect your builds, set homes, and get around the server without the hassle."
-        heading-align="left"
-        :items="featuresRowOne"
-      />
-      <ShowcaseRow
         :image="showcaseImages[1].image"
         :alt="showcaseImages[1].alt"
-        align="right"
-        heading="Play Your Way"
-        subtitle="A near-vanilla ruleset with just enough quality-of-life to keep things fair and fun."
-        heading-align="right"
-        :items="featuresRowTwo"
+        heading="Features"
+        subtitle="A near-vanilla package with just enough quality-of-life additions to keep things fair and fun."
+        heading-align="left"
+        :items="features"
       />
     </div>
 
@@ -142,7 +128,7 @@ async function copyServerIP(ip) {
   </main>
 
   <CallToAction
-    title="Learn about our custom plugin"
+    title="Learn the core features"
     description="All of Noxite's core functionality is powered by OneEngine, our custom all-in-one SMP plugin."
     link="/guides"
     buttonText="Read Guides"
