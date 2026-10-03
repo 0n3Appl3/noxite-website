@@ -24,7 +24,7 @@ const bannerImage = new URL('../assets/thing_3.png', import.meta.url).href
       <div class="mx-auto max-w-2xl text-left sm:text-center" v-scroll-reveal>
         <h2 class="text-3xl font-semibold">Support Noxite</h2>
         <p class="mt-4 text-cream/70">
-          Noxite is free to play server for everyone. If you would like to help cover hosting costs,
+          Noxite is a free to play server for everyone. If you would like to help cover hosting costs,
           donating unlocks a handful of extra perks as a thank you.
         </p>
       </div>
