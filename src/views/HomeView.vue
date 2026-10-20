@@ -6,6 +6,7 @@ import { features, faqs, showcaseImages } from '../websiteData'
 import CallToAction from '../components/CallToAction.vue'
 import DonateSection from '../components/DonateSection.vue'
 import ShowcaseRow from '../components/ShowcaseRow.vue'
+import MapSection from '../components/MapSection.vue'
 
 const showSnackbar = ref(false)
 async function copyServerIP(ip) {
@@ -97,6 +98,8 @@ async function copyServerIP(ip) {
         :items="features"
       />
     </div>
+
+    <MapSection />
 
     <DonateSection />
 

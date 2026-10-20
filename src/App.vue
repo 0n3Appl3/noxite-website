@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 const year = new Date().getFullYear()
 
 const donateLink = 'https://buymeacoffee.com/noxitenz'
+const mapLink = 'https://map.noxite.co.nz'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -36,6 +37,10 @@ const navLinks = [
           >
             {{ link.label }}
           </RouterLink>
+
+          <a :href="mapLink" target="_blank" rel="noopener" class="pill-link text-night hover:bg-night/5">
+            Map
+          </a>
 
           <a :href="donateLink" target="_blank" rel="noopener"
              class="grid h-10 w-10 place-items-center rounded-full bg-night/5 text-night hover:bg-coral hover:text-white transition-colors" aria-label="Donate">
@@ -67,6 +72,15 @@ const navLinks = [
         >
           {{ link.label }}
         </RouterLink>
+        <a
+          :href="mapLink"
+          target="_blank"
+          rel="noopener"
+          @click="close()"
+          class="pill-link text-night hover:bg-night/5"
+        >
+          Map
+        </a>
         <div class="flex gap-2 pt-2">
           <a :href="donateLink" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Donate</a>
           <a href="https://discord.gg/xnyMD2r" target="_blank" rel="noopener" class="pill-link bg-night/5 text-night">Discord</a>
@@ -100,6 +114,11 @@ const navLinks = [
             <RouterLink :to="link.to" @click="scrollToTop" class="pill-link text-cream/80 hover:bg-white/10 hover:text-white">
               {{ link.label }}
             </RouterLink>
+          </li>
+          <li>
+            <a :href="mapLink" target="_blank" rel="noopener" class="pill-link text-cream/80 hover:bg-white/10 hover:text-white">
+              Map
+            </a>
           </li>
         </ul>
       </div>
