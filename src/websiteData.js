@@ -201,7 +201,7 @@ export const featuredPlugins = [
     id: 1,
     icon: 'ShieldCheckIcon',
     title: 'Land Claiming',
-    description: 'A full chunk-based claiming system with claim groups, three tiers of trust, per-claim toggles (PvP, explosions, mob griefing, and more), and a live sidebar map.'
+    description: 'A full chunk-based claiming system with claim groups, four tiers of trust, per-claim toggles (PvP, explosions, mob griefing, and more), and a live sidebar map.'
   },
   {
     id: 2,
