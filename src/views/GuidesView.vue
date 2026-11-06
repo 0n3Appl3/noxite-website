@@ -63,7 +63,7 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                 <p class="mt-3 text-night/70">Protecting your builds is an integral part of the survival experience. Claiming works by chunk (a 16x16 area) and every chunk you claim belongs to a named "claim group" that you can expand over time.</p>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Claim a Chunk</h4>
-                <p class="mt-3 text-night/70">Stand in the chunk you want to protect and enter the following command.</p>
+                <p class="mt-3 text-night/70">Stand in the chunk you want to protect and enter the following command. You can use this command to move a claimed chunk to a different claim group, new or existing.</p>
                 <code class="command-block">/claim land [claim name]</code>
                 <div class="callout callout-note"><strong>Note:</strong> If the name matches an existing claim group of yours, the chunk is added to it, but only if it shares an edge with a chunk you already own in that group (touching diagonally does not count). If the name is new, a fresh claim group is created. Names can contain spaces, but are limited to 32 characters.</div>
                 <p class="text-night/70">A few things to keep in mind:</p>
@@ -72,6 +72,11 @@ const tabs = ['General', 'Land Claiming', 'Homes', 'Waypoints', 'Teleportation',
                   <li>Each claim group stays within a single world.</li>
                   <li>Words used by claim commands (such as <code class="command-block inline">list</code>, <code class="command-block inline">map</code> or <code class="command-block inline">info</code>) cannot be used as claim names.</li>
                 </ul>
+
+                <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Unclaim a Chunk</h4>
+                <p class="mt-3 text-night/70">Stand in the chunk you want to unclaim from your claim group and enter the following command.</p>
+                <code class="command-block">/claim unlink [claim name]</code>
+                <div class="callout callout-warning"><strong>Warning:</strong> You only get a partial refund of the claim blocks you spent on that chunk.</div>
 
                 <h4 class="mt-8 font-display font-semibold border-b-2 border-night/10 pb-2">Claim Blocks</h4>
                 <p class="mt-3 text-night/70">Claiming costs claim blocks. Every player starts with 400, each chunk costs 100, and you earn 40 more every 10 minutes you spend online. A message appears above your hotbar each time you earn some. Check your balance any time.</p>
